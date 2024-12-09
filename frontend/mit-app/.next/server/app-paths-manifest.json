@@ -1,0 +1,6 @@
+{
+  "/(main)/page": "app/(main)/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/diaries/edit/[id]/page": "app/diaries/edit/[id]/page.js",
+  "/api/diaries/[id]/route": "app/api/diaries/[id]/route.js"
+}
