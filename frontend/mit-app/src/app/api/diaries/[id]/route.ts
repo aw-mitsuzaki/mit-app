@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server';
 import { runQuery } from '../../../../lib/db';
 
+
 // GET: 特定の日報を取得
-export async function GET(req: Request, { params }: { params: { id: string } }) {
-    const { id } = params; // URLからIDを取得
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+    const id = (await params).id;
 
     // IDのバリデーション
-    if (isNaN(Number(id))) {
+    if (!id || isNaN(Number(id))) {
         return NextResponse.json({ error: 'Invalid diary ID.' }, { status: 400 });
     }
 
@@ -14,7 +15,7 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
         // 特定のIDの日記を取得
         const result = await runQuery('SELECT * FROM diary WHERE id = ?', [id]);
 
-        if (result.length === 0) {
+        if (!result || result.length === 0) {
             return NextResponse.json({ error: 'Diary entry not found.' }, { status: 404 });
         }
 
@@ -25,13 +26,12 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     }
 }
 
-
 // PUT: 特定の日報を更新
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
-    const { id } = params; // URLからIDを取得
+export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
+    const id = (await params).id;
 
     try {
-        const body = await req.json();
+        const body = await request.json();
         const { title, content } = body;
 
         if (!title || !content) {
@@ -45,7 +45,7 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
         ]);
 
         // 更新が成功したかチェック
-        if (result.affectedRows === 0) {
+        if (!result || result.length === 0) {
             return NextResponse.json({ error: 'Diary entry not found or no changes made.' }, { status: 404 });
         }
 
@@ -53,30 +53,5 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
     } catch (error) {
         console.error('Error updating diary entry:', error);
         return NextResponse.json({ error: 'Failed to update diary entry.' }, { status: 500 });
-    }
-}
-
-
-// DELETE: 特定の日報を削除
-export async function DELETE(req: Request, { params }: { params: { id: string } }) {
-    const { id } = params; // URLからIDを取得
-
-    // IDのバリデーション
-    if (isNaN(Number(id))) {
-        return NextResponse.json({ error: 'Invalid diary ID.' }, { status: 400 });
-    }
-
-    try {
-        const result = await runQuery('DELETE FROM diary WHERE id = ?', [id]);
-
-        // 削除が成功したかチェック
-        if (result.affectedRows === 0) {
-            return NextResponse.json({ error: 'Diary entry not found.' }, { status: 404 });
-        }
-
-        return NextResponse.json({ message: 'Diary entry deleted successfully.' });
-    } catch (error) {
-        console.error('Error deleting diary entry:', error);
-        return NextResponse.json({ error: 'Failed to delete diary entry.' }, { status: 500 });
     }
 }

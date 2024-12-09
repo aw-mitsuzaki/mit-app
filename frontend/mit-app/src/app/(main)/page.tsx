@@ -2,18 +2,25 @@ import Link from 'next/link';
 import DiaryCard from '../components/DiaryCard/DiaryCard';
 import { runQuery } from '../../lib/db';
 
+type Diary = {
+  id: number;
+  title: string;
+  content: string;
+  created_at: string; // データベースの型に応じて変更
+};
+
 const MainPage = async () => {
-  let diaries = [];
+  let diaries: Diary[] = [];
   try {
-    // データベースからデータを取得し、プレーンオブジェクトに変換
-    const rawDiaries = await runQuery('SELECT * FROM diary');
+    // データベースからデータを取得し、型を指定
+    const rawDiaries: Diary[] = await runQuery('SELECT * FROM diary');
     console.log(rawDiaries);
 
-    diaries = rawDiaries.map((diary: any) => ({
-      id: diary.id,
-      title: diary.title,
-      content: diary.content,
-      created_at: diary.created_at,
+    diaries = rawDiaries.map((diary) => ({
+      id: diary.id as number,
+      title: diary.title as string,
+      content: diary.content as string,
+      created_at: diary.created_at as string,
     }));
   } catch (error) {
     console.error('Error fetching diaries:', error);

@@ -47,8 +47,12 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
         setDiary(data);
         setTitle(data.title);
         setContent(data.content);
-      } catch (err: any) {
-        setError(err.message || 'エラーが発生しました');
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('エラーが発生しました');
+        }
       } finally {
         setLoading(false);
       }
@@ -75,8 +79,12 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
       alert('日記が更新されました');
       router.push('/'); // メインページにリダイレクト
-    } catch (err: any) {
-      setError(err.message || 'エラーが発生しました');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('エラーが発生しました');
+      }
     }
   };
 
