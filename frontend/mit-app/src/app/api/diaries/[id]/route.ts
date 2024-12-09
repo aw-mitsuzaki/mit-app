@@ -32,6 +32,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
     try {
         const body = await request.json();
+
         const { title, content } = body;
 
         if (!title || !content) {
@@ -45,7 +46,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
         ]);
 
         // 更新が成功したかチェック
-        if (!result || result.length === 0) {
+        if (!result) {
             return NextResponse.json({ error: 'Diary entry not found or no changes made.' }, { status: 404 });
         }
 

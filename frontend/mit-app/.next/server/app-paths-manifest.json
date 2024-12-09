@@ -1,10 +1,8 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/diaries/[id]/route": "app/api/diaries/[id]/route.js",
-  "/api/diaries/route": "app/api/diaries/route.js",
+  "/(main)/page": "app/(main)/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/diaries/edit/[id]/page": "app/diaries/edit/[id]/page.js",
+  "/api/diaries/[id]/route": "app/api/diaries/[id]/route.js",
   "/diaries/new/page": "app/diaries/new/page.js",
-  "/diaries/page": "app/diaries/page.js",
-  "/(main)/page": "app/(main)/page.js"
+  "/api/diaries/route": "app/api/diaries/route.js"
 }

@@ -1,6 +1,8 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import DiaryCard from '../components/DiaryCard/DiaryCard';
-import { runQuery } from '../../lib/db';
 
 type Diary = {
   id: number;
@@ -9,21 +11,30 @@ type Diary = {
   created_at: string; // データベースの型に応じて変更
 };
 
-const MainPage = async () => {
-  let diaries: Diary[] = [];
-  try {
-    // データベースからデータを取得し、型を指定
-    const rawDiaries: Diary[] = await runQuery('SELECT * FROM diary');
-    console.log(rawDiaries);
+const MainPage = () => {
+  const [diaries, setDiaries] = useState<Diary[]>([]);
+  const [loading, setLoading] = useState(true);
 
-    diaries = rawDiaries.map((diary) => ({
-      id: diary.id as number,
-      title: diary.title as string,
-      content: diary.content as string,
-      created_at: diary.created_at as string,
-    }));
-  } catch (error) {
-    console.error('Error fetching diaries:', error);
+  useEffect(() => {
+    const fetchDiaries = async () => {
+      try {
+        const response = await fetch('/api/diaries'); // APIエンドポイントにリクエスト
+        if (!response.ok) throw new Error('Failed to fetch diaries');
+
+        const data: Diary[] = await response.json();
+        setDiaries(data); // データをstateに設定
+      } catch (error) {
+        console.error('Error fetching diaries:', error);
+      } finally {
+        setLoading(false); // ローディングを終了
+      }
+    };
+
+    fetchDiaries();
+  }, []);
+
+  if (loading) {
+    return <div>読み込み中...</div>;
   }
 
   return (
