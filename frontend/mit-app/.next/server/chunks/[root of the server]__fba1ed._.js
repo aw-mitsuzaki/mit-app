@@ -76,7 +76,7 @@ function runQuery(query, params = []) {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(rows); // 明示的にDiary[]型にキャスト
+                resolve(rows);
             }
         });
     });
@@ -87,7 +87,7 @@ function getQuery(query, params = []) {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(row); // 明示的に型をキャスト
+                resolve(row);
             }
         });
     });
@@ -98,7 +98,7 @@ function allQuery(query, params = []) {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(rows); // 明示的にDiary[]型にキャスト
+                resolve(rows);
             }
         });
     });

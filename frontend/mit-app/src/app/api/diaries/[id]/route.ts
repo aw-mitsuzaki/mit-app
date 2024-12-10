@@ -1,6 +1,12 @@
 import { NextResponse } from 'next/server';
 import { runQuery } from '../../../../lib/db';
 
+type Diary = {
+    id: number;
+    title: string;
+    content: string;
+    created_at: string;
+};
 
 // GET: 特定の日報を取得
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -13,7 +19,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
     try {
         // 特定のIDの日記を取得
-        const result = await runQuery('SELECT * FROM diary WHERE id = ?', [id]);
+        const result = await runQuery<Diary>('SELECT * FROM diary WHERE id = ?', [id]);
 
         if (!result || result.length === 0) {
             return NextResponse.json({ error: 'Diary entry not found.' }, { status: 404 });
@@ -39,7 +45,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
             return NextResponse.json({ error: 'Title and content are required.' }, { status: 400 });
         }
 
-        const result = await runQuery('UPDATE diary SET title = ?, content = ? WHERE id = ?', [
+        const result = await runQuery<Diary>('UPDATE diary SET title = ?, content = ? WHERE id = ?', [
             title,
             content,
             id,

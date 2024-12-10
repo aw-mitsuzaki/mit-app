@@ -31,7 +31,7 @@ const EditDiaryPage = ({ params })=>{
             const fetchParams = {
                 "EditDiaryPage.useEffect.fetchParams": async ()=>{
                     const resolvedParams = await params;
-                    setId(resolvedParams.id); // paramsからIDを取得
+                    setId(resolvedParams.id);
                 }
             }["EditDiaryPage.useEffect.fetchParams"];
             fetchParams();

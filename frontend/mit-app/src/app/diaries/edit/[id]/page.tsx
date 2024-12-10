@@ -23,7 +23,7 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
   useEffect(() => {
     const fetchParams = async () => {
       const resolvedParams = await params;
-      setId(resolvedParams.id); // paramsからIDを取得
+      setId(resolvedParams.id);
     };
 
     fetchParams();

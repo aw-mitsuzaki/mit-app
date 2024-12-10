@@ -2,13 +2,6 @@ import sqlite3 from 'sqlite3';
 
 const DATABASE_PATH = './database/db.sqlite';
 
-// Diaryの型を定義
-type Diary = {
-    id: number;
-    title: string;
-    content: string;
-    created_at: string; // 必要に応じてDate型に変換も可能
-};
 
 // SQLiteデータベースの接続を初期化
 export const db = new sqlite3.Database(DATABASE_PATH, (err) => {
@@ -19,40 +12,40 @@ export const db = new sqlite3.Database(DATABASE_PATH, (err) => {
     }
 });
 
-// クエリを実行する関数
-export function runQuery(query: string, params: (string | number)[] = []): Promise<Diary[]> {
+// 型引数を用いた汎用的なクエリ実行関数
+export function runQuery<T>(query: string, params: (string | number)[] = []): Promise<T[]> {
     return new Promise((resolve, reject) => {
         db.all(query, params, (err, rows) => {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(rows as Diary[]); // 明示的にDiary[]型にキャスト
+                resolve(rows as T[]);
             }
         });
     });
 }
 
-// 単一のデータを取得する関数
-export function getQuery(query: string, params: (string | number)[] = []): Promise<Diary | undefined> {
+// 単一データ取得用関数
+export function getQuery<T>(query: string, params: (string | number)[] = []): Promise<T | undefined> {
     return new Promise((resolve, reject) => {
         db.get(query, params, (err, row) => {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(row as Diary | undefined); // 明示的に型をキャスト
+                resolve(row as T | undefined);
             }
         });
     });
 }
 
-// 全データを取得する関数
-export function allQuery(query: string, params: (string | number)[] = []): Promise<Diary[]> {
+// 全データ取得用関数
+export function allQuery<T>(query: string, params: (string | number)[] = []): Promise<T[]> {
     return new Promise((resolve, reject) => {
         db.all(query, params, (err, rows) => {
             if (err) {
                 reject(new Error(`SQLite Error: ${err.message}`));
             } else {
-                resolve(rows as Diary[]); // 明示的にDiary[]型にキャスト
+                resolve(rows as T[]);
             }
         });
     });
