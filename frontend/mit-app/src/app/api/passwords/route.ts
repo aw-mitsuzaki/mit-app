@@ -13,10 +13,10 @@ type Password = {
 // GET: すべての日報を取得
 export async function GET() {
     try {
-        const diaries = await runQuery<Password>('SELECT * FROM password_manager');
+        const diaries = await runQuery<Password>('SELECT * FROM password_manager ORDER BY site_name');
         return NextResponse.json(diaries);
     } catch (error) {
-        console.error('Error fetching diaries:', error);
+        console.error('Error fetching password_manager:', error);
         return NextResponse.json({ error: 'Failed to fetch diaries.' }, { status: 500 });
     }
 }
