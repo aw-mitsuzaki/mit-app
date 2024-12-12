@@ -140,7 +140,7 @@ const PasswordList = ({ passwords })=>{
             children: url
         }, void 0, false, {
             fileName: "[project]/src/app/components/PasswordList.tsx",
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 9
         }, this);
     const TableRow = ({ password })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -151,7 +151,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.site_name
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -159,7 +159,7 @@ const PasswordList = ({ passwords })=>{
                     children: renderLink(password.site_url)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 41,
+                    lineNumber: 42,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -167,7 +167,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.login_id ?? "N/A"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 42,
+                    lineNumber: 43,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -175,7 +175,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.password
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 43,
+                    lineNumber: 44,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -183,7 +183,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.email ?? "N/A"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 44,
+                    lineNumber: 45,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -195,18 +195,18 @@ const PasswordList = ({ passwords })=>{
                         children: "更新"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/PasswordList.tsx",
-                        lineNumber: 46,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 45,
+                    lineNumber: 46,
                     columnNumber: 13
                 }, this)
             ]
         }, password.id, true, {
             fileName: "[project]/src/app/components/PasswordList.tsx",
-            lineNumber: 39,
+            lineNumber: 40,
             columnNumber: 9
         }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -217,62 +217,62 @@ const PasswordList = ({ passwords })=>{
                     className: "bg-gray-100",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6 text-left",
                             children: "サイト名"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 61,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
-                            children: "サイトURL"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
                             lineNumber: 62,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
-                            children: "ログインID"
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6 text-left",
+                            children: "サイトURL"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
                             lineNumber: 63,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
-                            children: "パスワード"
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6 text-left",
+                            children: "ログインID"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
                             lineNumber: 64,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
-                            children: "メールアドレス"
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6 text-left",
+                            children: "パスワード"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
                             lineNumber: 65,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                            className: "py-4 px-2 border-b border-gray-300",
-                            children: "操作"
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6 text-left",
+                            children: "メールアドレス"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
                             lineNumber: 66,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                            className: "py-4 px-2 border-b border-gray-300 w-1/6",
+                            children: "操作"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/PasswordList.tsx",
+                            lineNumber: 67,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 60,
+                    lineNumber: 61,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 59,
+                lineNumber: 60,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -280,18 +280,18 @@ const PasswordList = ({ passwords })=>{
                         password: password
                     }, password.id, false, {
                         fileName: "[project]/src/app/components/PasswordList.tsx",
-                        lineNumber: 71,
+                        lineNumber: 72,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 69,
+                lineNumber: 70,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/PasswordList.tsx",
-        lineNumber: 58,
+        lineNumber: 59,
         columnNumber: 9
     }, this);
 };
@@ -350,7 +350,7 @@ const MainPage = ()=>{
             children: "読み込み中..."
         }, void 0, false, {
             fileName: "[project]/src/app/(main)/page.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 12
         }, this);
     }
@@ -365,7 +365,7 @@ const MainPage = ()=>{
                         children: "日報 & パスワード管理"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 60,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -377,7 +377,7 @@ const MainPage = ()=>{
                                 children: "日報登録"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/page.tsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -386,19 +386,19 @@ const MainPage = ()=>{
                                 children: "パスワード登録"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/page.tsx",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/page.tsx",
-                lineNumber: 59,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -409,7 +409,7 @@ const MainPage = ()=>{
                         children: "日報一覧"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this),
                     errors.diaries ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -417,7 +417,7 @@ const MainPage = ()=>{
                         children: errors.diaries
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 80,
+                        lineNumber: 81,
                         columnNumber: 11
                     }, this) : diaries.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
@@ -425,25 +425,25 @@ const MainPage = ()=>{
                                 diary: diary
                             }, diary.id, false, {
                                 fileName: "[project]/src/app/(main)/page.tsx",
-                                lineNumber: 85,
+                                lineNumber: 86,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-gray-500",
                         children: "登録された日報がありません。"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 89,
+                        lineNumber: 90,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/page.tsx",
-                lineNumber: 77,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -454,7 +454,7 @@ const MainPage = ()=>{
                         children: "パスワード一覧"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 94,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, this),
                     errors.passwords ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -462,32 +462,32 @@ const MainPage = ()=>{
                         children: errors.passwords
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 96,
+                        lineNumber: 97,
                         columnNumber: 11
                     }, this) : passwords.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$PasswordList$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         passwords: passwords
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 99,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-gray-500",
                         children: "登録されたパスワードがありません。"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 101,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/page.tsx",
-                lineNumber: 93,
+                lineNumber: 94,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/page.tsx",
-        lineNumber: 58,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 };

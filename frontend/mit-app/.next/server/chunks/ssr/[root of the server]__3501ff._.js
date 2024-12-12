@@ -50,10 +50,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const UpdatePasswordPage = ({ params })=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const [id, setId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [siteName, setSiteName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [category, setCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [siteUrl, setSiteUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [loginId, setLoginId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [pass, setPass] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [memo, setMemo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
@@ -80,6 +81,7 @@ const UpdatePasswordPage = ({ params })=>{
                 if (!response.ok) throw new Error('Failed to fetch password data');
                 const data = await response.json();
                 setPassword(data);
+                setCategory(data.category);
                 setSiteName(data.site_name);
                 setSiteUrl(data.site_url);
                 setLoginId(data.login_id);
@@ -111,6 +113,7 @@ const UpdatePasswordPage = ({ params })=>{
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
+                    category,
                     siteName,
                     siteUrl,
                     loginId,
@@ -131,7 +134,7 @@ const UpdatePasswordPage = ({ params })=>{
             children: "読み込み中..."
         }, void 0, false, {
             fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-            lineNumber: 99,
+            lineNumber: 102,
             columnNumber: 12
         }, this);
     }
@@ -141,7 +144,7 @@ const UpdatePasswordPage = ({ params })=>{
             children: error
         }, void 0, false, {
             fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-            lineNumber: 103,
+            lineNumber: 106,
             columnNumber: 12
         }, this);
     }
@@ -150,7 +153,7 @@ const UpdatePasswordPage = ({ params })=>{
             children: "データが見つかりません"
         }, void 0, false, {
             fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-            lineNumber: 107,
+            lineNumber: 110,
             columnNumber: 12
         }, this);
     }
@@ -162,7 +165,7 @@ const UpdatePasswordPage = ({ params })=>{
                 children: "パスワード更新"
             }, void 0, false, {
                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                lineNumber: 112,
+                lineNumber: 115,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -174,10 +177,39 @@ const UpdatePasswordPage = ({ params })=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                 className: "block text-gray-700 font-bold mb-2",
                                 htmlFor: "siteName",
+                                children: "カテゴリ"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
+                                lineNumber: 118,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                id: "category",
+                                type: "text",
+                                value: category,
+                                onChange: (e)=>setCategory(e.target.value),
+                                className: "w-full p-2 border rounded",
+                                required: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
+                                lineNumber: 119,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
+                        lineNumber: 117,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                className: "block text-gray-700 font-bold mb-2",
+                                htmlFor: "siteName",
                                 children: "サイト名"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 115,
+                                lineNumber: 129,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -189,13 +221,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 114,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -206,7 +238,7 @@ const UpdatePasswordPage = ({ params })=>{
                                 children: "サイトURL"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 126,
+                                lineNumber: 140,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -218,13 +250,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 127,
+                                lineNumber: 141,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 125,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -235,7 +267,7 @@ const UpdatePasswordPage = ({ params })=>{
                                 children: "ログインID"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 137,
+                                lineNumber: 151,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -246,13 +278,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 138,
+                                lineNumber: 152,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 136,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -263,7 +295,7 @@ const UpdatePasswordPage = ({ params })=>{
                                 children: "パスワード"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 147,
+                                lineNumber: 161,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -274,13 +306,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 148,
+                                lineNumber: 162,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 146,
+                        lineNumber: 160,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -291,7 +323,7 @@ const UpdatePasswordPage = ({ params })=>{
                                 children: "メールアドレス"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 157,
+                                lineNumber: 171,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -302,13 +334,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 158,
+                                lineNumber: 172,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 156,
+                        lineNumber: 170,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -319,7 +351,7 @@ const UpdatePasswordPage = ({ params })=>{
                                 children: "メモ"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 167,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -330,13 +362,13 @@ const UpdatePasswordPage = ({ params })=>{
                                 rows: 6
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                                lineNumber: 168,
+                                lineNumber: 182,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 166,
+                        lineNumber: 180,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -345,19 +377,19 @@ const UpdatePasswordPage = ({ params })=>{
                         children: "更新"
                     }, void 0, false, {
                         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                        lineNumber: 176,
+                        lineNumber: 190,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-                lineNumber: 113,
+                lineNumber: 116,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/passwords/edit/[id]/page.tsx",
-        lineNumber: 111,
+        lineNumber: 114,
         columnNumber: 5
     }, this);
 };

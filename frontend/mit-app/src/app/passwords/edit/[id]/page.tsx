@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 type Password = {
   id: number;
+  category: string | null;
   site_name: string;
   site_url: string;
   login_id: string | null;
@@ -16,10 +17,11 @@ type Password = {
 const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const router = useRouter();
   const [id, setId] = useState<string | null>(null);
-  const [password, setPassword] = useState<Password | null>(null);
   const [siteName, setSiteName] = useState('');
+  const [category, setCategory] = useState('');
   const [siteUrl, setSiteUrl] = useState('');
   const [loginId, setLoginId] = useState('');
+  const [password, setPassword] = useState<Password | null>(null);
   const [pass, setPass] = useState('');
   const [email, setEmail] = useState('');
   const [memo, setMemo] = useState('');
@@ -52,6 +54,7 @@ const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => 
 
         const data: Password = await response.json();
         setPassword(data);
+        setCategory(data.category);
         setSiteName(data.site_name);
         setSiteUrl(data.site_url);
         setLoginId(data.login_id);
@@ -82,7 +85,7 @@ const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => 
       const response = await fetch(`/api/passwords/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ siteName, siteUrl, loginId, pass, email, memo }),
+        body: JSON.stringify({ category, siteName, siteUrl, loginId, pass, email, memo }),
       });
 
       if (!response.ok) throw new Error('Failed to update password');
@@ -111,6 +114,17 @@ const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => 
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">パスワード更新</h1>
       <form onSubmit={handleUpdate} className="space-y-4">
+      <div>
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="siteName">カテゴリ</label>
+          <input
+            id="category"
+            type="text"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          />
+        </div>
         <div>
           <label className="block text-gray-700 font-bold mb-2" htmlFor="siteName">サイト名</label>
           <input

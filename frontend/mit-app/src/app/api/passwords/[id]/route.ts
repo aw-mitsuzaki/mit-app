@@ -3,6 +3,7 @@ import { runQuery } from '../../../../lib/db';
 
 type Password = {
     id: number;
+    category: string,
     site_name: string;
     site_url: string;
     login_id: string | null;
@@ -40,13 +41,14 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
     try {
         const body = await request.json();
-        const { siteName, siteUrl, loginId, pass, email, memo } = body;
+        const { category, siteName, siteUrl, loginId, pass, email, memo } = body;
 
         if (!siteName || !siteUrl || !pass) {
             return NextResponse.json({ error: 'site_nam, site_url, password  required.' }, { status: 400 });
         }
 
-        const result = await runQuery<Password>('UPDATE password_manager SET site_name = ?, site_url = ?, login_id = ?, password = ?, email = ?, memo = ? WHERE id = ?', [
+        const result = await runQuery<Password>('UPDATE password_manager SET category = ?, site_name = ?, site_url = ?, login_id = ?, password = ?, email = ?, memo = ? WHERE id = ?', [
+            category,
             siteName,
             siteUrl,
             loginId,

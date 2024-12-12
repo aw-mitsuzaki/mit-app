@@ -130,7 +130,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$
 ;
 async function GET() {
     try {
-        const diaries = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])('SELECT * FROM password_manager ORDER BY site_name');
+        const diaries = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])('SELECT * FROM password_manager ORDER BY category, site_name');
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(diaries);
     } catch (error) {
         console.error('Error fetching password_manager:', error);
@@ -144,7 +144,7 @@ async function GET() {
 async function POST(req) {
     try {
         const body = await req.json();
-        const { site_name, site_url, login_id, password, email, memo } = body;
+        const { category, site_name, site_url, login_id, password, email, memo } = body;
         if (!site_name || !site_url || !password) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: 'Title and content are required.'
@@ -152,7 +152,8 @@ async function POST(req) {
                 status: 400
             });
         }
-        await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])("INSERT INTO password_manager (site_name, site_url, login_id, password, email, memo) VALUES (?, ?, ?, ?, ?, ? )", [
+        await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])("INSERT INTO password_manager (category, site_name, site_url, login_id, password, email, memo) VALUES (?, ?, ?, ?, ?, ?, ? )", [
+            category,
             site_name,
             site_url,
             login_id,

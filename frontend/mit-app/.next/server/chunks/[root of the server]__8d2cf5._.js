@@ -164,8 +164,7 @@ async function PUT(request, { params }) {
     const id = (await params).id;
     try {
         const body = await request.json();
-        const { siteName, siteUrl, loginId, pass, email, memo } = body;
-        console.log(body);
+        const { category, siteName, siteUrl, loginId, pass, email, memo } = body;
         if (!siteName || !siteUrl || !pass) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: 'site_nam, site_url, password  required.'
@@ -173,7 +172,8 @@ async function PUT(request, { params }) {
                 status: 400
             });
         }
-        const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])('UPDATE password_manager SET site_name = ?, site_url = ?, login_id = ?, password = ?, email = ?, memo = ? WHERE id = ?', [
+        const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])('UPDATE password_manager SET category = ?, site_name = ?, site_url = ?, login_id = ?, password = ?, email = ?, memo = ? WHERE id = ?', [
+            category,
             siteName,
             siteUrl,
             loginId,

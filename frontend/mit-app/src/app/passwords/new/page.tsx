@@ -8,6 +8,7 @@ const AddPassword: React.FC = () => {
     const router = useRouter();
 
     const [formData, setFormData] = useState({
+        category: "",
         site_name: "",
         site_url: "",
         login_id: "",
@@ -32,7 +33,7 @@ const AddPassword: React.FC = () => {
         });
         if (res.ok) {
             alert("登録成功！");
-            setFormData({ site_name: "", site_url: "", login_id: "", password: "", email: "", memo: "" });
+            setFormData({ category: "", site_name: "", site_url: "", login_id: "", password: "", email: "", memo: "" });
             router.push('/');
         } else {
             alert("登録失敗");
@@ -43,6 +44,16 @@ const AddPassword: React.FC = () => {
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4">新しいサイトを作成</h1>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <div>
+                    <label>カテゴリ</label>
+                    <input
+                        type="text"
+                        name="category"
+                        value={formData.category}
+                        className="w-full p-2 border rounded"
+                        onChange={handleChange}
+                    />
+                </div>
                 <div>
                     <label>サイト名</label>
                     <input

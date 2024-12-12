@@ -15,7 +15,11 @@ CREATE TABLE password_manager (
     password TEXT NOT NULL,              -- パスワード (必須)
     email TEXT,                          -- メールアドレス (NULL可能)
     memo TEXT,                           -- メモ (NULL可能)
+    category TEXT,                       -- カテゴリ
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- 作成日時
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP  -- 更新日時
 );
 
+
+ALTER TABLE password_manager
+ADD COLUMN category TEXT;

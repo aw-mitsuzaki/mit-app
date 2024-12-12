@@ -10,6 +10,7 @@ type Password = {
     login_id: string | null;
     password: string;
     email: string | null;
+    category: string | null;
 };
 
 type PasswordListProps = {
@@ -58,12 +59,12 @@ const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
         <table className="w-full bg-white border border-gray-300">
             <thead>
                 <tr className="bg-gray-100">
-                    <th className="py-4 px-2 border-b border-gray-300">サイト名</th>
-                    <th className="py-4 px-2 border-b border-gray-300">サイトURL</th>
-                    <th className="py-4 px-2 border-b border-gray-300">ログインID</th>
-                    <th className="py-4 px-2 border-b border-gray-300">パスワード</th>
-                    <th className="py-4 px-2 border-b border-gray-300">メールアドレス</th>
-                    <th className="py-4 px-2 border-b border-gray-300">操作</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6 text-left">サイト名</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6 text-left">サイトURL</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6 text-left">ログインID</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6 text-left">パスワード</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6 text-left">メールアドレス</th>
+                    <th className="py-4 px-2 border-b border-gray-300 w-1/6">操作</th>
                 </tr>
             </thead>
             <tbody>

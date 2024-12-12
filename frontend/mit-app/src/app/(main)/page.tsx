@@ -19,6 +19,7 @@ type Password = {
   login_id: string | null;
   password: string;
   email: string | null;
+  category: string | null;
 };
 
 const MainPage = () => {
