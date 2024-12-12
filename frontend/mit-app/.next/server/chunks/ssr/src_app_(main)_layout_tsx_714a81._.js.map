@@ -2,6 +2,6 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///usr/src/app/src/app/%28main%29/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nconst MainLayout = ({\n    children,\n}: Readonly<{\n    children: React.ReactNode;\n}>) => {\n    return (\n        <div className=\"h-screen flex flex-col\">\n            <div className=\"bg-lime-200 flex-none h-12 p-3\">ヘッダ</div>\n            <main className=\"bg-slate-200 h-screen overflow-auto\">{children}</main>\n        </div>\n    )\n}\n\nexport default MainLayout"],"names":[],"mappings":";;;;;AAEA,MAAM,aAAa,CAAC,EAChB,QAAQ,EAGV;IACE,qBACI,8OAAC;QAAI,WAAU;;0BACX,8OAAC;gBAAI,WAAU;0BAAiC;;;;;;0BAChD,8OAAC;gBAAK,WAAU;0BAAuC;;;;;;;;;;;;AAGnE;uCAEe"}},
-    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///usr/src/app/src/app/%28main%29/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nconst MainLayout = ({\n    children,\n}: Readonly<{\n    children: React.ReactNode;\n}>) => {\n    return <>{children}</>;\n};\n\nexport default MainLayout;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,aAAa,CAAC,EAChB,QAAQ,EAGV;IACE,qBAAO;kBAAG;;AACd;uCAEe"}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 
 type Diary = {
   id: number;
@@ -12,11 +12,11 @@ type Diary = {
 
 const DiaryCard = ({ diary }: { diary: Diary }) => {
   const router = useRouter();
-  const [formattedDate, setFormattedDate] = useState<string>('');
 
-  useEffect(() => {
+  // useMemoを使って、日付フォーマットの計算を最適化
+  const formattedDate = useMemo(() => {
     const date = new Date(diary.created_at);
-    setFormattedDate(date.toLocaleString());
+    return date.toLocaleString();
   }, [diary.created_at]);
 
   const handleUpdate = () => {
@@ -25,13 +25,17 @@ const DiaryCard = ({ diary }: { diary: Diary }) => {
 
   return (
     <div className="bg-white border p-4 rounded shadow-md w-full">
-      <h2 className="text-lg font-bold">{diary.title}</h2>
-      <p className="text-gray-700 mt-2">{diary.content}</p>
+      <h2 className="text-lg font-bold truncate" title={diary.title}>
+        {diary.title}
+      </h2>
+      <p className="text-gray-700 mt-2 line-clamp-3" title={diary.content}>
+        {diary.content}
+      </p>
       <p className="text-sm text-gray-500 mt-4">{formattedDate}</p>
       <div className="flex justify-end mt-4 space-x-2">
         <button
           onClick={handleUpdate}
-          className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
         >
           更新
         </button>
