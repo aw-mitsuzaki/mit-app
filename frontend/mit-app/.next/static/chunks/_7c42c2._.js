@@ -10,12 +10,15 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 'use client';
 ;
+;
 const AddPassword = ()=>{
     _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         site_name: "",
         site_url: "",
@@ -50,6 +53,7 @@ const AddPassword = ()=>{
                 email: "",
                 memo: ""
             });
+            router.push('/');
         } else {
             alert("登録失敗");
         }
@@ -62,7 +66,7 @@ const AddPassword = ()=>{
                 children: "新しいサイトを作成"
             }, void 0, false, {
                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                lineNumber: 40,
+                lineNumber: 44,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -75,7 +79,7 @@ const AddPassword = ()=>{
                                 children: "サイト名"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 43,
+                                lineNumber: 47,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -87,13 +91,13 @@ const AddPassword = ()=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 44,
+                                lineNumber: 48,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 42,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -102,7 +106,7 @@ const AddPassword = ()=>{
                                 children: "サイトURL"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 54,
+                                lineNumber: 58,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -114,13 +118,13 @@ const AddPassword = ()=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 59,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 53,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -129,7 +133,7 @@ const AddPassword = ()=>{
                                 children: "ログインID"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 65,
+                                lineNumber: 69,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -140,13 +144,13 @@ const AddPassword = ()=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 66,
+                                lineNumber: 70,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 64,
+                        lineNumber: 68,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -155,7 +159,7 @@ const AddPassword = ()=>{
                                 children: "パスワード"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 75,
+                                lineNumber: 79,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -167,13 +171,13 @@ const AddPassword = ()=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 80,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 74,
+                        lineNumber: 78,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -182,7 +186,7 @@ const AddPassword = ()=>{
                                 children: "メールアドレス"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 86,
+                                lineNumber: 90,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -193,26 +197,38 @@ const AddPassword = ()=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                                lineNumber: 87,
+                                lineNumber: 91,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 85,
+                        lineNumber: 89,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                            children: "メモ"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/passwords/new/page.tsx",
-                            lineNumber: 96,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "メモ"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 100,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                name: "memo",
+                                value: formData.memo,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 101,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 95,
+                        lineNumber: 99,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -221,23 +237,27 @@ const AddPassword = ()=>{
                         children: "登録"
                     }, void 0, false, {
                         fileName: "[project]/src/app/passwords/new/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 108,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/passwords/new/page.tsx",
-                lineNumber: 41,
+                lineNumber: 45,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/passwords/new/page.tsx",
-        lineNumber: 39,
+        lineNumber: 43,
         columnNumber: 9
     }, this);
 };
-_s(AddPassword, "GInbx407Ds+fy9MCJECPRJbJwVE=");
+_s(AddPassword, "T/0CGD/JFfWf0hR81t0bOQFAIS4=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = AddPassword;
 const __TURBOPACK__default__export__ = AddPassword;
 var _c;

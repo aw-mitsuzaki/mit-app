@@ -1,6 +1,6 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_a94f80._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/_1cee51._.js", {
 
-"[project]/src/app/diaries/new/page.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/src/app/passwords/new/page.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: require } = __turbopack_context__;
@@ -16,38 +16,46 @@ var _s = __turbopack_refresh__.signature();
 'use client';
 ;
 ;
-const NewDiaryPage = ()=>{
+const AddPassword = ()=>{
     _s();
-    const [title, setTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
-    const [content, setContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        site_name: "",
+        site_url: "",
+        login_id: "",
+        password: "",
+        email: "",
+        memo: ""
+    });
+    const handleChange = (e)=>{
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        if (!title.trim() || !content.trim()) {
-            alert('タイトルと内容を入力してください。');
-            return;
-        }
-        try {
-            const response = await fetch('/api/diaries', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    title,
-                    content
-                })
+        const res = await fetch("/api/passwords", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        });
+        if (res.ok) {
+            alert("登録成功！");
+            setFormData({
+                site_name: "",
+                site_url: "",
+                login_id: "",
+                password: "",
+                email: "",
+                memo: ""
             });
-            if (!response.ok) {
-                const errorData = await response.json();
-                alert(`エラー: ${errorData.message || '日報の登録に失敗しました。'}`);
-                return;
-            }
-            alert('日報が正常に追加されました！');
             router.push('/');
-        } catch (error) {
-            console.error('Error adding diary entry:', error);
-            alert('ネットワークエラーが発生しました。再試行してください。');
+        } else {
+            alert("登録失敗");
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -55,9 +63,9 @@ const NewDiaryPage = ()=>{
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 className: "text-2xl font-bold mb-4",
-                children: "新しい日報を作成"
+                children: "新しいサイトを作成"
             }, void 0, false, {
-                fileName: "[project]/src/app/diaries/new/page.tsx",
+                fileName: "[project]/src/app/passwords/new/page.tsx",
                 lineNumber: 44,
                 columnNumber: 13
             }, this),
@@ -65,66 +73,200 @@ const NewDiaryPage = ()=>{
                 onSubmit: handleSubmit,
                 className: "flex flex-col gap-4",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        type: "text",
-                        placeholder: "タイトル",
-                        value: title,
-                        onChange: (e)=>setTitle(e.target.value),
-                        className: "p-2 border rounded",
-                        required: true
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/diaries/new/page.tsx",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "サイト名"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 47,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                name: "site_name",
+                                value: formData.site_name,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange,
+                                required: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 48,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
                         lineNumber: 46,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                        placeholder: "内容",
-                        value: content,
-                        onChange: (e)=>setContent(e.target.value),
-                        className: "p-2 border rounded",
-                        rows: 5,
-                        required: true
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/diaries/new/page.tsx",
-                        lineNumber: 54,
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "サイトURL"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 58,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                name: "site_url",
+                                value: formData.site_url,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange,
+                                required: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 59,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 57,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "ログインID"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 69,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                name: "login_id",
+                                value: formData.login_id,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 70,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 68,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "パスワード"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 79,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                name: "password",
+                                value: formData.password,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange,
+                                required: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 80,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 78,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "メールアドレス"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 90,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "email",
+                                name: "email",
+                                value: formData.email,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 91,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 89,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                children: "メモ"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 100,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                name: "memo",
+                                value: formData.memo,
+                                className: "w-full p-2 border rounded",
+                                onChange: handleChange
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/passwords/new/page.tsx",
+                                lineNumber: 101,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 99,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
-                        className: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors",
+                        className: "bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600",
                         children: "登録"
                     }, void 0, false, {
-                        fileName: "[project]/src/app/diaries/new/page.tsx",
-                        lineNumber: 62,
+                        fileName: "[project]/src/app/passwords/new/page.tsx",
+                        lineNumber: 108,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/src/app/diaries/new/page.tsx",
+                fileName: "[project]/src/app/passwords/new/page.tsx",
                 lineNumber: 45,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/src/app/diaries/new/page.tsx",
+        fileName: "[project]/src/app/passwords/new/page.tsx",
         lineNumber: 43,
         columnNumber: 9
     }, this);
 };
-_s(NewDiaryPage, "UDt4gaR4tsPkvmYYXYVHwDaS2OU=", false, function() {
+_s(AddPassword, "T/0CGD/JFfWf0hR81t0bOQFAIS4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
 });
-_c = NewDiaryPage;
-const __TURBOPACK__default__export__ = NewDiaryPage;
+_c = AddPassword;
+const __TURBOPACK__default__export__ = AddPassword;
 var _c;
-__turbopack_refresh__.register(_c, "NewDiaryPage");
+__turbopack_refresh__.register(_c, "AddPassword");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/app/diaries/new/page.tsx [app-rsc] (ecmascript, Next.js server component, client modules)": ((__turbopack_context__) => {
+"[project]/src/app/passwords/new/page.tsx [app-rsc] (ecmascript, Next.js server component, client modules)": ((__turbopack_context__) => {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, t: require } = __turbopack_context__;
 {
@@ -550,4 +692,4 @@ module.exports = __turbopack_require__("[project]/node_modules/next/dist/client/
 }}),
 }]);
 
-//# sourceMappingURL=_a94f80._.js.map
+//# sourceMappingURL=_1cee51._.js.map

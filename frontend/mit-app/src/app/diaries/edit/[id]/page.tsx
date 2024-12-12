@@ -12,31 +12,30 @@ type Diary = {
 
 const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const router = useRouter();
-  const [id, setId] = useState<string | null>(null); // paramsから取得したIDを格納
+  const [id, setId] = useState<string | null>(null);
   const [diary, setDiary] = useState<Diary | null>(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // paramsをアンラップしてIDを取得
   useEffect(() => {
     const fetchParams = async () => {
-      const resolvedParams = await params;
-      setId(resolvedParams.id);
+      try {
+        const resolvedParams = await params;
+        setId(resolvedParams.id);
+      } catch {
+        setError('パラメータの取得に失敗しました');
+      }
     };
 
     fetchParams();
   }, [params]);
 
-  // IDが取得できたら日記データを取得
   useEffect(() => {
     if (!id) return;
 
     const fetchDiary = async () => {
-      setLoading(true);
-      setError(null);
-
       try {
         const response = await fetch(`/api/diaries/${id}`);
         if (!response.ok) {
@@ -48,11 +47,7 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
         setTitle(data.title);
         setContent(data.content);
       } catch (err: unknown) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError('エラーが発生しました');
-        }
+        setError(err instanceof Error ? err.message : 'エラーが発生しました');
       } finally {
         setLoading(false);
       }
@@ -61,7 +56,6 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
     fetchDiary();
   }, [id]);
 
-  // 更新処理
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
@@ -78,27 +72,15 @@ const EditDiaryPage = ({ params }: { params: Promise<{ id: string }> }) => {
       }
 
       alert('日記が更新されました');
-      router.push('/'); // メインページにリダイレクト
+      router.push('/');
     } catch (err: unknown) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError('エラーが発生しました');
-      }
+      setError(err instanceof Error ? err.message : 'エラーが発生しました');
     }
   };
 
-  if (loading) {
-    return <p className="text-gray-500">データを読み込み中...</p>;
-  }
-
-  if (error) {
-    return <p className="text-red-500">{error}</p>;
-  }
-
-  if (!diary) {
-    return <p className="text-gray-500">データが見つかりません。</p>;
-  }
+  if (loading) return <p className="text-gray-500">データを読み込み中...</p>;
+  if (error) return <p className="text-red-500">{error}</p>;
+  if (!diary) return <p className="text-gray-500">データが見つかりません。</p>;
 
   return (
     <div className="p-4">

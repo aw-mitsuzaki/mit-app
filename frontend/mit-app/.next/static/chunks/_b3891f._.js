@@ -105,7 +105,7 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)"); // 修正：next/router ではなく next/navigation を使用
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
 'use client';
@@ -114,8 +114,86 @@ const PasswordList = ({ passwords })=>{
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const handleUpdate = (id)=>{
-        router.push(`/passwords/edit/${id}`); // 動的ルートに遷移
+        router.push(`/passwords/edit/${id}`);
     };
+    const renderLink = (url)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+            href: url,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "text-blue-600 hover:underline",
+            "aria-label": `Open ${url} in a new tab`,
+            children: url
+        }, void 0, false, {
+            fileName: "[project]/src/app/components/PasswordList.tsx",
+            lineNumber: 27,
+            columnNumber: 9
+        }, this);
+    const TableRow = ({ password })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+            className: "hover:bg-gray-50",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300",
+                    children: password.site_name
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 40,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300",
+                    children: renderLink(password.site_url)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 41,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300",
+                    children: password.login_id ?? "N/A"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 42,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300",
+                    children: password.password
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 43,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300",
+                    children: password.email ?? "N/A"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 44,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                    className: "py-4 px-2 border-b border-gray-300 text-center",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>handleUpdate(password.id),
+                        className: "px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none",
+                        "aria-label": `Update details for ${password.site_name}`,
+                        children: "更新"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/PasswordList.tsx",
+                        lineNumber: 46,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/PasswordList.tsx",
+                    lineNumber: 45,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, password.id, true, {
+            fileName: "[project]/src/app/components/PasswordList.tsx",
+            lineNumber: 39,
+            columnNumber: 9
+        }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
         className: "w-full bg-white border border-gray-300",
         children: [
@@ -128,7 +206,7 @@ const PasswordList = ({ passwords })=>{
                             children: "サイト名"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 30,
+                            lineNumber: 61,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -136,7 +214,7 @@ const PasswordList = ({ passwords })=>{
                             children: "サイトURL"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 31,
+                            lineNumber: 62,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -144,7 +222,7 @@ const PasswordList = ({ passwords })=>{
                             children: "ログインID"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 32,
+                            lineNumber: 63,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -152,7 +230,7 @@ const PasswordList = ({ passwords })=>{
                             children: "パスワード"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 33,
+                            lineNumber: 64,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -160,7 +238,7 @@ const PasswordList = ({ passwords })=>{
                             children: "メールアドレス"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 34,
+                            lineNumber: 65,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -168,105 +246,37 @@ const PasswordList = ({ passwords })=>{
                             children: "操作"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 35,
+                            lineNumber: 66,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 29,
+                    lineNumber: 60,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 28,
+                lineNumber: 59,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                children: passwords.map((password)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                        className: "hover:bg-gray-50",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300",
-                                children: password.site_name
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 41,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: password.site_url,
-                                    target: "_blank",
-                                    rel: "noopener noreferrer",
-                                    className: "text-blue-600 hover:underline",
-                                    children: password.site_url
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/components/PasswordList.tsx",
-                                    lineNumber: 43,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 42,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300",
-                                children: password.login_id || "N/A"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 52,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300",
-                                children: password.password
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 53,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300",
-                                children: password.email || "N/A"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 54,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                className: "py-4 px-2 border-b border-gray-300 text-center",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>handleUpdate(password.id),
-                                    className: "px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none",
-                                    children: "更新"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/components/PasswordList.tsx",
-                                    lineNumber: 56,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/PasswordList.tsx",
-                                lineNumber: 55,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, password.id, true, {
+                children: passwords.map((password)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TableRow, {
+                        password: password
+                    }, password.id, false, {
                         fileName: "[project]/src/app/components/PasswordList.tsx",
-                        lineNumber: 40,
+                        lineNumber: 71,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 38,
+                lineNumber: 69,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/PasswordList.tsx",
-        lineNumber: 27,
+        lineNumber: 58,
         columnNumber: 9
     }, this);
 };

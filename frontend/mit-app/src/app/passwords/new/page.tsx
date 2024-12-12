@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const AddPassword: React.FC = () => {
+
+    const router = useRouter();
 
     const [formData, setFormData] = useState({
         site_name: "",
@@ -14,7 +17,7 @@ const AddPassword: React.FC = () => {
     });
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ): void => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -30,6 +33,7 @@ const AddPassword: React.FC = () => {
         if (res.ok) {
             alert("登録成功！");
             setFormData({ site_name: "", site_url: "", login_id: "", password: "", email: "", memo: "" });
+            router.push('/');
         } else {
             alert("登録失敗");
         }
@@ -94,12 +98,16 @@ const AddPassword: React.FC = () => {
                 </div>
                 <div>
                     <label>メモ</label>
+                    <textarea
+                        name="memo"
+                        value={formData.memo}
+                        className="w-full p-2 border rounded"
+                        onChange={handleChange}
+                    ></textarea>
                 </div>
                 <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">登録</button>
-
             </form>
         </div>
-
     );
 };
 
