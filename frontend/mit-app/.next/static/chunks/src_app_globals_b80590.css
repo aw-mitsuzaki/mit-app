@@ -385,16 +385,20 @@ img, video {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-1\/6 {
   width: 16.6667%;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .flex-grow {
   flex-grow: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {

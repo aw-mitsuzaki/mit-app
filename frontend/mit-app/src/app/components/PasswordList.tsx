@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 type Password = {
@@ -19,9 +19,19 @@ type PasswordListProps = {
 
 const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
     const router = useRouter();
+    const [visiblePasswordId, setVisiblePasswordId] = useState<number | null>(null);
 
     const handleUpdate = (id: number) => {
         router.push(`/passwords/edit/${id}`);
+    };
+
+    const handlePasswordClick = async (password: string, id: number) => {
+        // コピー
+        await navigator.clipboard.writeText(password);
+        alert("パスワードがコピーされました！");
+
+        // 表示切り替え
+        setVisiblePasswordId(visiblePasswordId === id ? null : id);
     };
 
     const renderLink = (url: string) => (
@@ -41,7 +51,14 @@ const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
             <td className="py-4 px-2 border-b border-gray-300">{password.site_name}</td>
             <td className="py-4 px-2 border-b border-gray-300">{renderLink(password.site_url)}</td>
             <td className="py-4 px-2 border-b border-gray-300">{password.login_id ?? "N/A"}</td>
-            <td className="py-4 px-2 border-b border-gray-300">{password.password}</td>
+            <td
+                className="py-4 px-2 border-b border-gray-300 cursor-pointer text-center"
+                onClick={() => handlePasswordClick(password.password, password.id)}
+                aria-label={`Click to copy password for ${password.site_name}`}
+                title="クリックでコピー"
+            >
+                {visiblePasswordId === password.id ? password.password : "**********"}
+            </td>
             <td className="py-4 px-2 border-b border-gray-300">{password.email ?? "N/A"}</td>
             <td className="py-4 px-2 border-b border-gray-300 text-center">
                 <button

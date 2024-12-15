@@ -1,9 +1,6 @@
 {
   "/(main)/page": "app/(main)/page.js",
-  "/api/passwords/route": "app/api/passwords/route.js",
-  "/api/diaries/route": "app/api/diaries/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/passwords/new/page": "app/passwords/new/page.js",
-  "/passwords/edit/[id]/page": "app/passwords/edit/[id]/page.js",
-  "/api/passwords/[id]/route": "app/api/passwords/[id]/route.js"
+  "/api/diaries/route": "app/api/diaries/route.js",
+  "/api/passwords/route": "app/api/passwords/route.js"
 }
