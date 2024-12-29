@@ -29,12 +29,18 @@ const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
         // 表示切り替え
         setVisiblePasswordId(visiblePasswordId === id ? null : id);
 
-        // パスワードをクリップボードにコピー
-        navigator.clipboard.writeText(password).then(() => {
+        // 一時的なテキストエリアを作成してパスワードをコピー
+        const textArea = document.createElement('textarea');
+        textArea.value = password;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+            document.execCommand('copy');
             alert('パスワードがクリップボードにコピーされました');
-        }).catch(err => {
+        } catch (err) {
             console.error('クリップボードへのコピーに失敗しました', err);
-        });
+        }
+        document.body.removeChild(textArea);
     };
 
     const renderLink = (url: string) => (
