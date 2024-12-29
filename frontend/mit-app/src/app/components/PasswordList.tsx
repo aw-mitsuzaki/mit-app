@@ -25,13 +25,16 @@ const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
         router.push(`/passwords/edit/${id}`);
     };
 
-    const handlePasswordClick = async (password: string, id: number) => {
-        // コピー
-        await navigator.clipboard.writeText(password);
-        alert("パスワードがコピーされました！");
-
+    const handlePasswordClick = (password: string, id: number) => {
         // 表示切り替え
         setVisiblePasswordId(visiblePasswordId === id ? null : id);
+
+        // パスワードをクリップボードにコピー
+        navigator.clipboard.writeText(password).then(() => {
+            alert('パスワードがクリップボードにコピーされました');
+        }).catch(err => {
+            console.error('クリップボードへのコピーに失敗しました', err);
+        });
     };
 
     const renderLink = (url: string) => (
@@ -57,7 +60,7 @@ const PasswordList: React.FC<PasswordListProps> = ({ passwords }) => {
                 aria-label={`Click to copy password for ${password.site_name}`}
                 title="クリックでコピー"
             >
-                {visiblePasswordId === password.id ? password.password : "**********"}
+                **********
             </td>
             <td className="py-4 px-2 border-b border-gray-300">{password.email ?? "N/A"}</td>
             <td className="py-4 px-2 border-b border-gray-300 text-center">

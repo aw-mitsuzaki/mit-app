@@ -134,12 +134,15 @@ const PasswordList = ({ passwords })=>{
     const handleUpdate = (id)=>{
         router.push(`/passwords/edit/${id}`);
     };
-    const handlePasswordClick = async (password, id)=>{
-        // コピー
-        await navigator.clipboard.writeText(password);
-        alert("パスワードがコピーされました！");
+    const handlePasswordClick = (password, id)=>{
         // 表示切り替え
         setVisiblePasswordId(visiblePasswordId === id ? null : id);
+        // パスワードをクリップボードにコピー
+        navigator.clipboard.writeText(password).then(()=>{
+            alert('パスワードがクリップボードにコピーされました');
+        }).catch((err)=>{
+            console.error('クリップボードへのコピーに失敗しました', err);
+        });
     };
     const renderLink = (url)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
             href: url,
@@ -150,7 +153,7 @@ const PasswordList = ({ passwords })=>{
             children: url
         }, void 0, false, {
             fileName: "[project]/src/app/components/PasswordList.tsx",
-            lineNumber: 38,
+            lineNumber: 41,
             columnNumber: 9
         }, this);
     const TableRow = ({ password })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -161,7 +164,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.site_name
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 51,
+                    lineNumber: 54,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -169,7 +172,7 @@ const PasswordList = ({ passwords })=>{
                     children: renderLink(password.site_url)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 52,
+                    lineNumber: 55,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -177,7 +180,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.login_id ?? "N/A"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 53,
+                    lineNumber: 56,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -185,10 +188,10 @@ const PasswordList = ({ passwords })=>{
                     onClick: ()=>handlePasswordClick(password.password, password.id),
                     "aria-label": `Click to copy password for ${password.site_name}`,
                     title: "クリックでコピー",
-                    children: visiblePasswordId === password.id ? password.password : "**********"
+                    children: "**********"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 54,
+                    lineNumber: 57,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -196,7 +199,7 @@ const PasswordList = ({ passwords })=>{
                     children: password.email ?? "N/A"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 62,
+                    lineNumber: 65,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -208,18 +211,18 @@ const PasswordList = ({ passwords })=>{
                         children: "更新"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/PasswordList.tsx",
-                        lineNumber: 64,
+                        lineNumber: 67,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 63,
+                    lineNumber: 66,
                     columnNumber: 13
                 }, this)
             ]
         }, password.id, true, {
             fileName: "[project]/src/app/components/PasswordList.tsx",
-            lineNumber: 50,
+            lineNumber: 53,
             columnNumber: 9
         }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -234,7 +237,7 @@ const PasswordList = ({ passwords })=>{
                             children: "サイト名"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 79,
+                            lineNumber: 82,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -242,7 +245,7 @@ const PasswordList = ({ passwords })=>{
                             children: "サイトURL"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 80,
+                            lineNumber: 83,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -250,7 +253,7 @@ const PasswordList = ({ passwords })=>{
                             children: "ログインID"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 81,
+                            lineNumber: 84,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -258,7 +261,7 @@ const PasswordList = ({ passwords })=>{
                             children: "パスワード"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 82,
+                            lineNumber: 85,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -266,7 +269,7 @@ const PasswordList = ({ passwords })=>{
                             children: "メールアドレス"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 83,
+                            lineNumber: 86,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -274,18 +277,18 @@ const PasswordList = ({ passwords })=>{
                             children: "操作"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/PasswordList.tsx",
-                            lineNumber: 84,
+                            lineNumber: 87,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/PasswordList.tsx",
-                    lineNumber: 78,
+                    lineNumber: 81,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 77,
+                lineNumber: 80,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -293,18 +296,18 @@ const PasswordList = ({ passwords })=>{
                         password: password
                     }, password.id, false, {
                         fileName: "[project]/src/app/components/PasswordList.tsx",
-                        lineNumber: 89,
+                        lineNumber: 92,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/PasswordList.tsx",
-                lineNumber: 87,
+                lineNumber: 90,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/PasswordList.tsx",
-        lineNumber: 76,
+        lineNumber: 79,
         columnNumber: 9
     }, this);
 };
