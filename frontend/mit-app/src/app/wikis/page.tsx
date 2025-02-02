@@ -14,7 +14,7 @@ type Wiki = {
 const WikiPage = () => {
   const [wikis, setWikis] = useState<Wiki[]>([]);
   const [loading, setLoading] = useState(true);
-  const [errors, setErrors] = useState<{ diaries?: string; passwords?: string }>({});
+  const [errors, setErrors] = useState<{ wikis?: string;}>({});
 
   const fetchData = async <T,>(url: string, setter: (data: T) => void, key: keyof typeof errors) => {
     try {
