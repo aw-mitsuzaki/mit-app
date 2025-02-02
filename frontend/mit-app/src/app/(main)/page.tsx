@@ -35,7 +35,7 @@ const MainPage = () => {
   const [wikis, setWikis] = useState<Wiki[]>([]);
   const [passwords, setPasswords] = useState<Password[]>([]);
   const [loading, setLoading] = useState(true);
-  const [errors, setErrors] = useState<{ diaries?: string; passwords?: string }>({});
+  const [errors, setErrors] = useState<{ diaries?: string; wikis?: string; passwords?: string }>({});
 
   const fetchData = async <T,>(url: string, setter: (data: T) => void, key: keyof typeof errors) => {
     try {
