@@ -3,9 +3,17 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import DiaryCard from '../components/DiaryCard';
+import WikiCard from '../components/WikiCard';
 import PasswordList from '../components/PasswordList';
 
 type Diary = {
+  id: number;
+  title: string;
+  content: string;
+  created_at: string;
+};
+
+type Wiki = {
   id: number;
   title: string;
   content: string;
@@ -24,6 +32,7 @@ type Password = {
 
 const MainPage = () => {
   const [diaries, setDiaries] = useState<Diary[]>([]);
+  const [wikis, setWikis] = useState<Wiki[]>([]);
   const [passwords, setPasswords] = useState<Password[]>([]);
   const [loading, setLoading] = useState(true);
   const [errors, setErrors] = useState<{ diaries?: string; passwords?: string }>({});
@@ -44,6 +53,7 @@ const MainPage = () => {
     const loadData = async () => {
       await Promise.all([
         fetchData<Diary[]>('/api/diaries', setDiaries, 'diaries'),
+        fetchData<Wiki[]>('/api/wikis?limit=3', setWikis, 'wikis'),
         fetchData<Password[]>('/api/passwords', setPasswords, 'passwords'),
       ]);
       setLoading(false);
@@ -60,6 +70,12 @@ const MainPage = () => {
       <header className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">日報 & パスワード管理</h1>
         <div className="flex space-x-4">
+          <Link
+            href="/wikis/new"
+            className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 active:scale-95 transition-transform"
+          >
+            Wiki登録
+          </Link>
           <Link
             href="/diaries/new"
             className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 active:scale-95 transition-transform"
@@ -88,6 +104,28 @@ const MainPage = () => {
           </div>
         ) : (
           <p className="text-gray-500">登録された日報がありません。</p>
+        )}
+      </section>
+
+      <section className="my-6">
+        <h2 className="text-xl font-semibold">
+          <Link
+              href="/wikis"
+          >
+            wiki一覧
+          </Link>
+        </h2>
+        {errors.wikis ? (
+          <p className="text-red-500">{errors.wikis}</p>
+        ) : wikis.length > 0 ? (
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {wikis.map((wiki) => (
+              <WikiCard key={wiki.id} wiki={wiki} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-gray-500">登録されたWikiがありません。</p>
         )}
       </section>
 

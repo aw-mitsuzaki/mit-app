@@ -1,5 +1,9 @@
 {
   "/(main)/page": "app/(main)/page.js",
+  "/api/passwords/route": "app/api/passwords/route.js",
+  "/api/wikis/route": "app/api/wikis/route.js",
   "/api/diaries/route": "app/api/diaries/route.js",
-  "/api/passwords/route": "app/api/passwords/route.js"
+  "/wikis/new/page": "app/wikis/new/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/wikis/page": "app/wikis/page.js"
 }

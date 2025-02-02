@@ -5,7 +5,15 @@ CREATE TABLE diary (
     content TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-      
+
+# Wiki
+CREATE TABLE wiki (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 # パスワード管理
 CREATE TABLE password_manager (
     id INTEGER PRIMARY KEY AUTOINCREMENT, -- 一意のID

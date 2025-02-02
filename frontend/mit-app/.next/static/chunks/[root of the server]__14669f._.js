@@ -1014,16 +1014,8 @@ Object.defineProperty(exports, "HeadManagerContext", {
         return HeadManagerContext;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const HeadManagerContext = _react.default.createContext({});
 if ("TURBOPACK compile-time truthy", 1) {
     HeadManagerContext.displayName = 'HeadManagerContext';
@@ -1093,16 +1085,8 @@ Object.defineProperty(exports, "RouterContext", {
         return RouterContext;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const RouterContext = _react.default.createContext(null);
 if ("TURBOPACK compile-time truthy", 1) {
     RouterContext.displayName = 'RouterContext';
@@ -1716,16 +1700,8 @@ Object.defineProperty(exports, "Portal", {
         return Portal;
     }
 });
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _reactdom = (()=>{
-    const e = new Error("Cannot find module 'react-dom'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
+const _reactdom = __turbopack_require__("[project]/node_modules/react-dom/index.js [client] (ecmascript)");
 const Portal = (param)=>{
     let { children, type } = param;
     const [portalNode, setPortalNode] = (0, _react.useState)(null);
@@ -3076,11 +3052,7 @@ _export(exports, {
         return markAssetError;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _getassetpathfromroute = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/get-asset-path-from-route.js [client] (ecmascript)"));
 const _trustedtypes = __turbopack_require__("[project]/node_modules/next/dist/client/trusted-types.js [client] (ecmascript)");
 const _requestidlecallback = __turbopack_require__("[project]/node_modules/next/dist/client/request-idle-callback.js [client] (ecmascript)");
@@ -3647,11 +3619,7 @@ _export(exports, {
         return WEBPACK_STATS;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _modernbrowserslisttarget = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/modern-browserslist-target.js [client] (ecmascript)"));
 const COMPILER_NAMES = {
     client: 'client',
@@ -3793,11 +3761,7 @@ Object.defineProperty(exports, "default", {
         return PageLoader;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _addbasepath = __turbopack_require__("[project]/node_modules/next/dist/client/add-base-path.js [client] (ecmascript)");
 const _interpolateas = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/interpolate-as.js [client] (ecmascript)");
 const _getassetpathfromroute = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/get-asset-path-from-route.js [client] (ecmascript)"));
@@ -4144,31 +4108,11 @@ _export(exports, {
         return initScriptLoader;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _reactdom = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react-dom'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _reactdom = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react-dom/index.js [client] (ecmascript)"));
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _headmanagercontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.js [client] (ecmascript)");
 const _setattributesfromprops = __turbopack_require__("[project]/node_modules/next/dist/client/set-attributes-from-props.js [client] (ecmascript)");
 const _requestidlecallback = __turbopack_require__("[project]/node_modules/next/dist/client/request-idle-callback.js [client] (ecmascript)");
@@ -6125,11 +6069,7 @@ _export(exports, {
         return urlObjectKeys;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
 const _querystring = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/querystring.js [client] (ecmascript)"));
 const slashedProtocols = /https?|ftp|gopher|file/;
 function formatUrl(urlObj) {
@@ -6678,16 +6618,8 @@ _export(exports, {
         return matchesMiddleware;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
 const _removetrailingslash = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/remove-trailing-slash.js [client] (ecmascript)");
 const _routeloader = __turbopack_require__("[project]/node_modules/next/dist/client/route-loader.js [client] (ecmascript)");
 const _script = __turbopack_require__("[project]/node_modules/next/dist/client/script.js [client] (ecmascript)");
@@ -7124,11 +7056,11 @@ class Router {
                     });
                     return new Promise(()=>{});
                 }
-                const routerFilterSValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":6,"errorRate":0.0001,"numBits":116,"numHashes":14,"bitArray":[1,0,1,0,0,1,1,0,0,1,1,1,1,0,0,1,0,1,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1,0,1,1,0,0,1,1,1,0,1,1,1,0,0,1,1,0,0,1,1,1,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,1,1,1,0,1,0,0,1,1,0,1,0,0,0,1,0,0,0,1,1,1,0,0,1,1,0,1,1,0]}'));
+                const routerFilterSValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":8,"errorRate":0.0001,"numBits":154,"numHashes":14,"bitArray":[1,1,1,1,0,0,0,1,0,0,0,1,0,1,0,0,1,1,1,0,1,0,1,1,0,0,1,1,0,0,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,1,0,1,1,0,1,0,0,0,1,1,0,0,0,1,1,0,0,1,1,1,0,0,0,1,0,1,1,0,0,1,0,0,0,1,0,1,1,0,1,0,1,0,0,0,1,1,0,0,0,1,0,0,1,0,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,0,1,0,1,0,0,0,0,1,1,1,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1]}'));
                 if (!staticFilterData && routerFilterSValue) {
                     staticFilterData = routerFilterSValue ? routerFilterSValue : undefined;
                 }
-                const routerFilterDValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":4,"errorRate":0.0001,"numBits":77,"numHashes":14,"bitArray":[0,0,0,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,0,1,0,0,1,0,1,0,0,0,1,0,0,1,1,1,0,1,0,0,1,0,1,1,1,0,1,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0]}'));
+                const routerFilterDValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":5,"errorRate":0.0001,"numBits":96,"numHashes":14,"bitArray":[1,0,1,0,1,1,1,1,0,0,1,0,1,1,0,1,1,0,1,1,1,1,0,1,0,1,0,1,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,1,0,0,1,1,1,0,0,1,0,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0,1,0,1,1,1,1,0,0,0,0]}'));
                 if (!dynamicFilterData && routerFilterDValue) {
                     dynamicFilterData = routerFilterDValue ? routerFilterDValue : undefined;
                 }
@@ -8185,21 +8117,9 @@ Object.defineProperty(exports, "default", {
         return withRouter;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _router = __turbopack_require__("[project]/node_modules/next/dist/client/router.js [client] (ecmascript)");
 function withRouter(ComposedComponent) {
     function WithRouterWrapper(props) {
@@ -8267,16 +8187,8 @@ _export(exports, {
         return _withrouter.default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _router = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/router.js [client] (ecmascript)"));
 const _routercontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router-context.shared-runtime.js [client] (ecmascript)");
 const _iserror = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/lib/is-error.js [client] (ecmascript)"));
@@ -8451,21 +8363,9 @@ _export(exports, {
         return _default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _router = __turbopack_require__("[project]/node_modules/next/dist/client/router.js [client] (ecmascript)");
 const nextjsRouteAnnouncerStyles = {
     border: 0,
@@ -8614,16 +8514,8 @@ Object.defineProperty(exports, "ImageConfigContext", {
         return ImageConfigContext;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _imageconfig = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/image-config.js [client] (ecmascript)");
 const ImageConfigContext = _react.default.createContext(_imageconfig.imageConfigDefault);
 if ("TURBOPACK compile-time truthy", 1) {
@@ -8670,16 +8562,8 @@ _export(exports, {
         return TemplateContext;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const AppRouterContext = _react.default.createContext(null);
 const LayoutRouterContext = _react.default.createContext(null);
 const GlobalLayoutRouterContext = _react.default.createContext(null);
@@ -8724,11 +8608,7 @@ _export(exports, {
         return SearchParamsContext;
     }
 });
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
 const SearchParamsContext = (0, _react.createContext)(null);
 const PathnameContext = (0, _react.createContext)(null);
 const PathParamsContext = (0, _react.createContext)(null);
@@ -8792,21 +8672,9 @@ _export(exports, {
         return adaptForSearchParams;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _hooksclientcontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/hooks-client-context.shared-runtime.js [client] (ecmascript)");
 const _utils = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/index.js [client] (ecmascript)");
 const _aspathtosearchparams = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router/utils/as-path-to-search-params.js [client] (ecmascript)");
@@ -8993,16 +8861,8 @@ Object.defineProperty(exports, "getReactStitchedError", {
         return getReactStitchedError;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _iserror = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/lib/is-error.js [client] (ecmascript)"));
 const REACT_ERROR_STACK_BOTTOM_FRAME = 'react-stack-bottom-frame';
 const REACT_ERROR_STACK_BOTTOM_FRAME_REGEX = new RegExp("(at " + REACT_ERROR_STACK_BOTTOM_FRAME + " )|(" + REACT_ERROR_STACK_BOTTOM_FRAME + "\\@)");
@@ -9061,11 +8921,7 @@ Object.defineProperty(exports, "onRecoverableError", {
         return onRecoverableError;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _bailouttocsr = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/lazy-dynamic/bailout-to-csr.js [client] (ecmascript)");
 const _reportglobalerror = __turbopack_require__("[project]/node_modules/next/dist/client/react-client-callbacks/report-global-error.js [client] (ecmascript)");
 const _stitchederror = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/stitched-error.js [client] (ecmascript)");
@@ -9104,11 +8960,7 @@ Object.defineProperty(exports, "default", {
         return _default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _mitt = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/mitt.js [client] (ecmascript)"));
 class Span {
     end(endTime) {
@@ -9633,11 +9485,7 @@ _export(exports, {
         return isReactHydrationErrorMessage;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _iserror = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/lib/is-error.js [client] (ecmascript)"));
 const hydrationErrorRegex = /hydration failed|while hydrating|content does not match|did not match|HTML didn't match/i;
 const reactUnifiedMismatchWarning = "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used";
@@ -10036,11 +9884,7 @@ _export(exports, {
         return useErrorOverlayReducer;
     }
 });
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
 const ACTION_STATIC_INDICATOR = 'static-indicator';
 const ACTION_BUILD_OK = 'build-ok';
 const ACTION_BUILD_ERROR = 'build-error';
@@ -10635,21 +10479,9 @@ Object.defineProperty(exports, "ShadowPortal", {
         return ShadowPortal;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
-const _reactdom = (()=>{
-    const e = new Error("Cannot find module 'react-dom'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
+const _reactdom = __turbopack_require__("[project]/node_modules/react-dom/index.js [client] (ecmascript)");
 function ShadowPortal(param) {
     let { children } = param;
     let portalNode = _react.useRef(null);
@@ -10697,16 +10529,8 @@ Object.defineProperty(exports, "useOnClickOutside", {
         return useOnClickOutside;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 function useOnClickOutside(el, handler) {
     _react.useEffect({
         "useOnClickOutside.useEffect": ()=>{
@@ -10761,21 +10585,9 @@ Object.defineProperty(exports, "Dialog", {
         return Dialog;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _useonclickoutside = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/hooks/use-on-click-outside.js [client] (ecmascript)");
 const Dialog = function Dialog(param) {
     let { children, type, onClose, ...props } = param;
@@ -10869,21 +10681,9 @@ Object.defineProperty(exports, "DialogBody", {
         return DialogBody;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const DialogBody = function DialogBody(param) {
     let { children, className } = param;
     return /*#__PURE__*/ (0, _jsxruntime.jsx)("div", {
@@ -10914,21 +10714,9 @@ Object.defineProperty(exports, "DialogContent", {
         return DialogContent;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const DialogContent = function DialogContent(param) {
     let { children, className } = param;
     return /*#__PURE__*/ (0, _jsxruntime.jsx)("div", {
@@ -10959,21 +10747,9 @@ Object.defineProperty(exports, "DialogHeader", {
         return DialogHeader;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const DialogHeader = function DialogHeader(param) {
     let { children, className } = param;
     return /*#__PURE__*/ (0, _jsxruntime.jsx)("div", {
@@ -11033,11 +10809,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -12056,11 +11828,7 @@ Object.defineProperty(exports, "default", {
         return _default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _platform = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/platform/platform.js [client] (ecmascript)"));
 const _cssescape = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/css.escape/css.escape.js [client] (ecmascript)"));
 // input may be undefined, selector-tring, Node, NodeList, HTMLCollection, array of Nodes
@@ -14836,27 +14604,11 @@ Object.defineProperty(exports, "Overlay", {
         return Overlay;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _maintaintabfocus = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Overlay/maintain--tab-focus.js [client] (ecmascript)"));
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _bodylocker = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Overlay/body-locker.js [client] (ecmascript)");
 const Overlay = function Overlay(param) {
     let { className, children, fixed } = param;
@@ -15531,21 +15283,9 @@ Object.defineProperty(exports, "HotlinkedText", {
         return HotlinkedText;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _magicidentifier = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/magic-identifier.js [client] (ecmascript)");
 const linkRegex = /https?:\/\/[^\s/$.?#].[^\s)'"]*/i;
 const splitRegexp = new RegExp("(" + _magicidentifier.MAGIC_IDENTIFIER_REGEX.source + "|\\s+)");
@@ -15622,11 +15362,7 @@ Object.defineProperty(exports, "useOpenInEditor", {
         return useOpenInEditor;
     }
 });
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
 function useOpenInEditor(param) {
     let { file, lineNumber, column } = param === void 0 ? {} : param;
     const openInEditor = (0, _react.useCallback)(()=>{
@@ -15667,21 +15403,9 @@ Object.defineProperty(exports, "EditorLink", {
         return EditorLink;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _useopenineditor = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/use-open-in-editor.js [client] (ecmascript)");
 function EditorLink(param) {
     let { file, isSourceFile, location } = param;
@@ -15750,27 +15474,11 @@ Object.defineProperty(exports, "Terminal", {
         return Terminal;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _anser = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/anser/index.js [client] (ecmascript)"));
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _hotlinkedtext = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/hot-linked-text/index.js [client] (ecmascript)");
 const _EditorLink = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Terminal/EditorLink.js [client] (ecmascript)");
 function getFile(lines) {
@@ -15905,11 +15613,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -15956,11 +15660,7 @@ _export(exports, {
         return getStaleness;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 function VersionStalenessInfo(param) {
     let { versionInfo } = param;
     if (!versionInfo) return null;
@@ -16103,26 +15803,10 @@ _export(exports, {
         return styles;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _Dialog = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Dialog/index.js [client] (ecmascript)");
 const _Overlay = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Overlay/index.js [client] (ecmascript)");
 const _Terminal = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Terminal/index.js [client] (ecmascript)");
@@ -16213,21 +15897,9 @@ Object.defineProperty(exports, "CloseIcon", {
         return CloseIcon;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const CloseIcon = ()=>{
     return /*#__PURE__*/ (0, _jsxruntime.jsxs)("svg", {
         width: "24",
@@ -16275,21 +15947,9 @@ Object.defineProperty(exports, "LeftRightDialogHeader", {
         return LeftRightDialogHeader;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _CloseIcon = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon.js [client] (ecmascript)");
 const LeftRightDialogHeader = function LeftRightDialogHeader(param) {
     let { children, className, previous, next, close } = param;
@@ -16477,11 +16137,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -16551,11 +16207,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -16589,21 +16241,9 @@ Object.defineProperty(exports, "Toast", {
         return Toast;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const Toast = function Toast(param) {
     let { onClick, children, className, ...props } = param;
     return /*#__PURE__*/ (0, _jsxruntime.jsx)("div", {
@@ -16721,27 +16361,11 @@ Object.defineProperty(exports, "CodeFrame", {
         return CodeFrame;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _anser = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/anser/index.js [client] (ecmascript)"));
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _stripansi = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/strip-ansi/index.js [client] (ecmascript)"));
 const _stackframe = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/stack-frame.js [client] (ecmascript)");
 const _useopenineditor = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/use-open-in-editor.js [client] (ecmascript)");
@@ -16936,11 +16560,7 @@ Object.defineProperty(exports, "CallStackFrame", {
         return CallStackFrame;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _stackframe = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/stack-frame.js [client] (ecmascript)");
 const _useopenineditor = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/use-open-in-editor.js [client] (ecmascript)");
 const _hotlinkedtext = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/hot-linked-text/index.js [client] (ecmascript)");
@@ -17034,11 +16654,7 @@ Object.defineProperty(exports, "CollapseIcon", {
         return CollapseIcon;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 function CollapseIcon(param) {
     let { collapsed } = param === void 0 ? {} : param;
     return /*#__PURE__*/ (0, _jsxruntime.jsx)("svg", {
@@ -17085,11 +16701,7 @@ Object.defineProperty(exports, "FrameworkIcon", {
         return FrameworkIcon;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 function FrameworkIcon(param) {
     let { framework } = param;
     if (framework === 'react') {
@@ -17228,11 +16840,7 @@ Object.defineProperty(exports, "GroupedStackFrames", {
         return GroupedStackFrames;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _CallStackFrame = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/container/RuntimeError/CallStackFrame.js [client] (ecmascript)");
 const _CollapseIcon = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/icons/CollapseIcon.js [client] (ecmascript)");
 const _FrameworkIcon = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/icons/FrameworkIcon.js [client] (ecmascript)");
@@ -17308,26 +16916,10 @@ _export(exports, {
         return styles;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _CodeFrame = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/CodeFrame/index.js [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 const _groupstackframesbyframework = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/group-stack-frames-by-framework.js [client] (ecmascript)");
@@ -17433,16 +17025,8 @@ Object.defineProperty(exports, "PseudoHtmlDiff", {
         return PseudoHtmlDiff;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
 const _CollapseIcon = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/icons/CollapseIcon.js [client] (ecmascript)");
 function getAdjacentProps(isAdj) {
     return {
@@ -17688,21 +17272,9 @@ Object.defineProperty(exports, "CopyButton", {
         return CopyButton;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 function useCopyLegacy(content) {
     // This would be simpler with useActionState but we need to support React 18 here.
     // React 18 also doesn't have async transitions.
@@ -17948,11 +17520,7 @@ Object.defineProperty(exports, "NodejsInspectorCopyButton", {
         return NodejsInspectorCopyButton;
     }
 });
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _copybutton = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/copy-button/index.js [client] (ecmascript)");
 // Inline this helper to avoid widely used across the codebase,
 // as for this feature the Chrome detector doesn't need to be super accurate.
@@ -18131,21 +17699,9 @@ _export(exports, {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = (()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = __turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)");
 const _shared = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/shared.js [client] (ecmascript)");
 const _Dialog = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Dialog/index.js [client] (ecmascript)");
 const _LeftRightDialogHeader = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/LeftRightDialogHeader/index.js [client] (ecmascript)");
@@ -18523,21 +18079,9 @@ Object.defineProperty(exports, "ErrorBoundary", {
         return ErrorBoundary;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 class ErrorBoundary extends _react.PureComponent {
     static getDerivedStateFromError(error) {
         return {
@@ -18593,26 +18137,10 @@ Object.defineProperty(exports, "Base", {
         return Base;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -18650,11 +18178,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -18688,11 +18212,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -18726,11 +18246,7 @@ Object.defineProperty(exports, "styles", {
         return styles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -18764,16 +18280,8 @@ Object.defineProperty(exports, "ComponentStyles", {
         return ComponentStyles;
     }
 });
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 const _styles = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/CodeFrame/styles.js [client] (ecmascript)");
 const _Dialog = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/Dialog/index.js [client] (ecmascript)");
 const _styles1 = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/LeftRightDialogHeader/styles.js [client] (ecmascript)");
@@ -18831,26 +18339,10 @@ Object.defineProperty(exports, "CssReset", {
         return CssReset;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _tagged_template_literal_loose = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_tagged_template_literal_loose'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _tagged_template_literal_loose = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_tagged_template_literal_loose.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _nooptemplate = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/noop-template.js [client] (ecmascript)");
 function _templateObject() {
     const data = _tagged_template_literal_loose._([
@@ -18888,21 +18380,9 @@ Object.defineProperty(exports, "default", {
         return ReactDevOverlay;
     }
 });
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_wildcard._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _bus = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/bus.js [client] (ecmascript)"));
 const _ShadowPortal = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/components/ShadowPortal.js [client] (ecmascript)");
 const _BuildError = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/container/BuildError.js [client] (ecmascript)");
@@ -19037,16 +18517,8 @@ _export(exports, {
         return unregister;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _interop_require_wildcard = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_wildcard'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _interop_require_wildcard = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_wildcard.cjs [client] (ecmascript)");
 const _bus = /*#__PURE__*/ _interop_require_wildcard._(__turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/bus.js [client] (ecmascript)"));
 const _parsestack = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/parse-stack.js [client] (ecmascript)");
 const _parsecomponentstack = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/parse-component-stack.js [client] (ecmascript)");
@@ -19209,27 +18681,11 @@ _export(exports, {
         return version;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
 __turbopack_require__("[project]/node_modules/next/dist/build/polyfills/polyfill-module.js [client] (ecmascript)");
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
-const _client = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react-dom/client'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
+const _client = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react-dom/client.js [client] (ecmascript)"));
 const _headmanagercontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.js [client] (ecmascript)");
 const _mitt = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/shared/lib/mitt.js [client] (ecmascript)"));
 const _routercontextsharedruntime = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/router-context.shared-runtime.js [client] (ecmascript)");
@@ -19841,11 +19297,7 @@ Object.defineProperty(exports, "default", {
         return formatWebpackMessages;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _stripansi = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/strip-ansi/index.js [client] (ecmascript)"));
 // This file is based on https://github.com/facebook/create-react-app/blob/7b1a32be6ec9f99a6c9a3c66813f3ac09c4736b9/packages/react-dev-utils/formatWebpackMessages.js
 // It's been edited to remove chalk and CRA-specific logic
@@ -20095,11 +19547,7 @@ _export(exports, {
         return performFullReload;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _client = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/client.js [client] (ecmascript)");
 const _stripansi = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/compiled/strip-ansi/index.js [client] (ecmascript)"));
 const _websocket = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js [client] (ecmascript)");
@@ -20482,11 +19930,7 @@ Object.defineProperty(exports, "default", {
         return _default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _hotreloaderclient = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js [client] (ecmascript)"));
 const _websocket = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js [client] (ecmascript)");
 let reloading = false;
@@ -20571,11 +20015,7 @@ Object.defineProperty(exports, "default", {
         return _default;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _router = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/router.js [client] (ecmascript)"));
 const _websocket = __turbopack_require__("[project]/node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js [client] (ecmascript)");
 const _default = async (page)=>{
@@ -20803,11 +20243,7 @@ Object.defineProperty(exports, "pageBootstrap", {
         return pageBootstrap;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _ = __turbopack_require__("[project]/node_modules/next/dist/client/index.js [client] (ecmascript)");
 const _ondemandentriesclient = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/dev/on-demand-entries-client.js [client] (ecmascript)"));
 const _devbuildwatcher = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/dev/dev-build-watcher.js [client] (ecmascript)"));
@@ -20934,11 +20370,7 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
 const _ = __turbopack_require__("[project]/node_modules/next/dist/client/index.js [client] (ecmascript)");
 const _hotmiddlewareclient = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/next/dist/client/dev/hot-middleware-client.js [client] (ecmascript)"));
 const _pagebootstrap = __turbopack_require__("[project]/node_modules/next/dist/client/page-bootstrap.js [client] (ecmascript)");
@@ -20995,21 +20427,9 @@ Object.defineProperty(exports, "default", {
         return App;
     }
 });
-const _interop_require_default = (()=>{
-    const e = new Error("Cannot find module '@swc/helpers/_/_interop_require_default'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _jsxruntime = (()=>{
-    const e = new Error("Cannot find module 'react/jsx-runtime'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
-const _react = /*#__PURE__*/ _interop_require_default._((()=>{
-    const e = new Error("Cannot find module 'react'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})());
+const _interop_require_default = __turbopack_require__("[project]/node_modules/@swc/helpers/cjs/_interop_require_default.cjs [client] (ecmascript)");
+const _jsxruntime = __turbopack_require__("[project]/node_modules/react/jsx-runtime.js [client] (ecmascript)");
+const _react = /*#__PURE__*/ _interop_require_default._(__turbopack_require__("[project]/node_modules/react/index.js [client] (ecmascript)"));
 const _utils = __turbopack_require__("[project]/node_modules/next/dist/shared/lib/utils.js [client] (ecmascript)");
 /**
  * `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
