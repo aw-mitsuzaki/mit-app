@@ -52,7 +52,7 @@ const MainPage = () => {
   useEffect(() => {
     const loadData = async () => {
       await Promise.all([
-        fetchData<Diary[]>('/api/diaries', setDiaries, 'diaries'),
+        fetchData<Diary[]>('/api/diaries?limit=3', setDiaries, 'diaries'),
         fetchData<Wiki[]>('/api/wikis?limit=3', setWikis, 'wikis'),
         fetchData<Password[]>('/api/passwords', setPasswords, 'passwords'),
       ]);
@@ -92,7 +92,13 @@ const MainPage = () => {
       </header>
 
       <section className="my-6">
-        <h2 className="text-xl font-semibold">日報一覧</h2>
+        <h2 className="text-xl font-semibold">
+        <Link
+              href="/diaries"
+          >
+            日報一覧
+          </Link>
+        </h2>
         {errors.diaries ? (
           <p className="text-red-500">{errors.diaries}</p>
         ) : diaries.length > 0 ? (

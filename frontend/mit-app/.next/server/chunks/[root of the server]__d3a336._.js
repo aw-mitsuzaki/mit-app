@@ -128,10 +128,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/db.ts [app-route] (ecmascript)");
 ;
 ;
-async function GET() {
+async function GET(request) {
     try {
-        const diaries = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])('SELECT * FROM diary ORDER BY id desc LIMIT 3 ');
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(diaries);
+        const { searchParams } = new URL(request.url);
+        const limit = searchParams.get('limit');
+        // ベースのクエリ
+        let query = 'SELECT * FROM diary ORDER BY id  DESC';
+        const params = [];
+        // limit が存在する場合のみ LIMIT 句をつける
+        if (limit) {
+            query += ' LIMIT ?';
+            params.push(Number(limit));
+        }
+        const wikis = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["runQuery"])(query, params);
+        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(wikis);
     } catch (error) {
         console.error('Error fetching diaries:', error);
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({

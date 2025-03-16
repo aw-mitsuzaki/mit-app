@@ -9,15 +9,30 @@ type Diary = {
 };
 
 // GET: すべての日報を取得
-export async function GET() {
+export async function GET(request: Request) {
     try {
-        const diaries = await runQuery<Diary>('SELECT * FROM diary ORDER BY id desc LIMIT 3 ');
-        return NextResponse.json(diaries);
+        const { searchParams } = new URL(request.url);
+        const limit = searchParams.get('limit');
+    
+        // ベースのクエリ
+        let query = 'SELECT * FROM diary ORDER BY id  DESC';
+        const params: any[] = [];
+  
+        // limit が存在する場合のみ LIMIT 句をつける
+        if (limit) {
+          query += ' LIMIT ?';
+          params.push(Number(limit));
+        }
+
+        const wikis = await runQuery<Diary>(query, params);
+        return NextResponse.json(wikis);
     } catch (error) {
         console.error('Error fetching diaries:', error);
         return NextResponse.json({ error: 'Failed to fetch diaries.' }, { status: 500 });
     }
 }
+
+
 
 // POST: 新しい日報を登録
 export async function POST(req: Request) {

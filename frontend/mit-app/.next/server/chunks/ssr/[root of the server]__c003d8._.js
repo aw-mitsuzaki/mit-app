@@ -444,7 +444,7 @@ const MainPage = ()=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const loadData = async ()=>{
             await Promise.all([
-                fetchData('/api/diaries', setDiaries, 'diaries'),
+                fetchData('/api/diaries?limit=3', setDiaries, 'diaries'),
                 fetchData('/api/wikis?limit=3', setWikis, 'wikis'),
                 fetchData('/api/passwords', setPasswords, 'passwords')
             ]);
@@ -522,7 +522,14 @@ const MainPage = ()=>{
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                         className: "text-xl font-semibold",
-                        children: "日報一覧"
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/diaries",
+                            children: "日報一覧"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/(main)/page.tsx",
+                            lineNumber: 96,
+                            columnNumber: 9
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
                         lineNumber: 95,
@@ -533,7 +540,7 @@ const MainPage = ()=>{
                         children: errors.diaries
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 97,
+                        lineNumber: 103,
                         columnNumber: 11
                     }, this) : diaries.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
@@ -541,19 +548,19 @@ const MainPage = ()=>{
                                 diary: diary
                             }, diary.id, false, {
                                 fileName: "[project]/src/app/(main)/page.tsx",
-                                lineNumber: 102,
+                                lineNumber: 108,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-gray-500",
                         children: "登録された日報がありません。"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 106,
+                        lineNumber: 112,
                         columnNumber: 11
                     }, this)
                 ]
@@ -572,12 +579,12 @@ const MainPage = ()=>{
                             children: "wiki一覧"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/page.tsx",
-                            lineNumber: 112,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 111,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     errors.wikis ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -585,7 +592,7 @@ const MainPage = ()=>{
                         children: errors.wikis
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 119,
+                        lineNumber: 125,
                         columnNumber: 11
                     }, this) : wikis.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
@@ -593,25 +600,25 @@ const MainPage = ()=>{
                                 wiki: wiki
                             }, wiki.id, false, {
                                 fileName: "[project]/src/app/(main)/page.tsx",
-                                lineNumber: 124,
+                                lineNumber: 130,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 128,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-gray-500",
                         children: "登録されたWikiがありません。"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 128,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/page.tsx",
-                lineNumber: 110,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -622,7 +629,7 @@ const MainPage = ()=>{
                         children: "パスワード一覧"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 133,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this),
                     errors.passwords ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -630,26 +637,26 @@ const MainPage = ()=>{
                         children: errors.passwords
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 135,
+                        lineNumber: 141,
                         columnNumber: 11
                     }, this) : passwords.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$PasswordList$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         passwords: passwords
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 137,
+                        lineNumber: 143,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-gray-500",
                         children: "登録されたパスワードがありません。"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/page.tsx",
-                        lineNumber: 139,
+                        lineNumber: 145,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/page.tsx",
-                lineNumber: 132,
+                lineNumber: 138,
                 columnNumber: 7
             }, this)
         ]

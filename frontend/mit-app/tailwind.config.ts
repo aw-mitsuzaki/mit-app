@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["BIZ UDゴシック", "Segoe UI", "Arial", "sans-serif"],
+        serif: ["Georgia", "Times New Roman", "serif"],
+        mono: ["Consolas", "Courier New", "monospace"],
+      },
     },
   },
   plugins: [],

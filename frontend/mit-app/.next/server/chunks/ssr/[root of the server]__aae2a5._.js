@@ -49,28 +49,28 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const EditDiaryPage = ({ params })=>{
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
-    const [id, setId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // paramsから取得したIDを格納
+    const [id, setId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [diary, setDiary] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [title, setTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [content, setContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    // paramsをアンラップしてIDを取得
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchParams = async ()=>{
-            const resolvedParams = await params;
-            setId(resolvedParams.id);
+            try {
+                const resolvedParams = await params;
+                setId(resolvedParams.id);
+            } catch  {
+                setError('パラメータの取得に失敗しました');
+            }
         };
         fetchParams();
     }, [
         params
     ]);
-    // IDが取得できたら日記データを取得
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!id) return;
         const fetchDiary = async ()=>{
-            setLoading(true);
-            setError(null);
             try {
                 const response = await fetch(`/api/diaries/${id}`);
                 if (!response.ok) {
@@ -81,11 +81,7 @@ const EditDiaryPage = ({ params })=>{
                 setTitle(data.title);
                 setContent(data.content);
             } catch (err) {
-                if (err instanceof Error) {
-                    setError(err.message);
-                } else {
-                    setError('エラーが発生しました');
-                }
+                setError(err instanceof Error ? err.message : 'エラーが発生しました');
             } finally{
                 setLoading(false);
             }
@@ -94,7 +90,6 @@ const EditDiaryPage = ({ params })=>{
     }, [
         id
     ]);
-    // 更新処理
     const handleUpdate = async (e)=>{
         e.preventDefault();
         setError(null);
@@ -113,45 +108,35 @@ const EditDiaryPage = ({ params })=>{
                 throw new Error('日記の更新に失敗しました');
             }
             alert('日記が更新されました');
-            router.push('/'); // メインページにリダイレクト
+            router.push('/');
         } catch (err) {
-            if (err instanceof Error) {
-                setError(err.message);
-            } else {
-                setError('エラーが発生しました');
-            }
+            setError(err instanceof Error ? err.message : 'エラーが発生しました');
         }
     };
-    if (loading) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-gray-500",
-            children: "データを読み込み中..."
-        }, void 0, false, {
-            fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-            lineNumber: 92,
-            columnNumber: 12
-        }, this);
-    }
-    if (error) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-red-500",
-            children: error
-        }, void 0, false, {
-            fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-            lineNumber: 96,
-            columnNumber: 12
-        }, this);
-    }
-    if (!diary) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-gray-500",
-            children: "データが見つかりません。"
-        }, void 0, false, {
-            fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-            lineNumber: 100,
-            columnNumber: 12
-        }, this);
-    }
+    if (loading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+        className: "text-gray-500",
+        children: "データを読み込み中..."
+    }, void 0, false, {
+        fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
+        lineNumber: 81,
+        columnNumber: 23
+    }, this);
+    if (error) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+        className: "text-red-500",
+        children: error
+    }, void 0, false, {
+        fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
+        lineNumber: 82,
+        columnNumber: 21
+    }, this);
+    if (!diary) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+        className: "text-gray-500",
+        children: "データが見つかりません。"
+    }, void 0, false, {
+        fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
+        lineNumber: 83,
+        columnNumber: 22
+    }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "p-4",
         children: [
@@ -160,7 +145,7 @@ const EditDiaryPage = ({ params })=>{
                 children: "日記を編集"
             }, void 0, false, {
                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                lineNumber: 105,
+                lineNumber: 87,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -175,7 +160,7 @@ const EditDiaryPage = ({ params })=>{
                                 children: "タイトル"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 108,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -187,13 +172,13 @@ const EditDiaryPage = ({ params })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 111,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                        lineNumber: 107,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -204,7 +189,7 @@ const EditDiaryPage = ({ params })=>{
                                 children: "内容"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 122,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -216,13 +201,13 @@ const EditDiaryPage = ({ params })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 125,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                        lineNumber: 121,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -235,7 +220,7 @@ const EditDiaryPage = ({ params })=>{
                                 children: "キャンセル"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 136,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -244,25 +229,25 @@ const EditDiaryPage = ({ params })=>{
                                 children: "更新"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                                lineNumber: 143,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                        lineNumber: 135,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-                lineNumber: 106,
+                lineNumber: 88,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/diaries/edit/[id]/page.tsx",
-        lineNumber: 104,
+        lineNumber: 86,
         columnNumber: 5
     }, this);
 };
