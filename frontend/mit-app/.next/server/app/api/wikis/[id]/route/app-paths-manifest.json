@@ -1,0 +1,3 @@
+{
+  "/api/wikis/[id]/route": "app/api/wikis/[id]/route.js"
+}

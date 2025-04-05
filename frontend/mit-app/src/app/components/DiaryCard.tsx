@@ -13,7 +13,6 @@ type Diary = {
 const DiaryCard = ({ diary }: { diary: Diary }) => {
   const router = useRouter();
 
-  // useMemoを使って、日付フォーマットの計算を最適化
   const formattedDate = useMemo(() => {
     const date = new Date(diary.created_at);
     return date.toLocaleString();
@@ -21,6 +20,10 @@ const DiaryCard = ({ diary }: { diary: Diary }) => {
 
   const handleUpdate = () => {
     router.push(`/diaries/edit/${diary.id}`);
+  };
+
+  const handleView = () => {
+    router.push(`/diaries/${diary.id}`);
   };
 
   return (
@@ -33,6 +36,12 @@ const DiaryCard = ({ diary }: { diary: Diary }) => {
       </p>
       <p className="text-sm text-gray-500 mt-4">{formattedDate}</p>
       <div className="flex justify-end mt-4 space-x-2">
+        <button
+          onClick={handleView}
+          className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+        >
+          表示
+        </button>
         <button
           onClick={handleUpdate}
           className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"

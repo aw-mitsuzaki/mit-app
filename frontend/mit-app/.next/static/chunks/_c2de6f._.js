@@ -19,7 +19,6 @@ var _s = __turbopack_refresh__.signature();
 const DiaryCard = ({ diary })=>{
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    // useMemoを使って、日付フォーマットの計算を最適化
     const formattedDate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "DiaryCard.useMemo[formattedDate]": ()=>{
             const date = new Date(diary.created_at);
@@ -31,6 +30,9 @@ const DiaryCard = ({ diary })=>{
     const handleUpdate = ()=>{
         router.push(`/diaries/edit/${diary.id}`);
     };
+    const handleView = ()=>{
+        router.push(`/diaries/${diary.id}`);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white border p-4 rounded shadow-md w-full",
         children: [
@@ -40,7 +42,7 @@ const DiaryCard = ({ diary })=>{
                 children: diary.title
             }, void 0, false, {
                 fileName: "[project]/src/app/components/DiaryCard.tsx",
-                lineNumber: 28,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -49,7 +51,7 @@ const DiaryCard = ({ diary })=>{
                 children: diary.content
             }, void 0, false, {
                 fileName: "[project]/src/app/components/DiaryCard.tsx",
-                lineNumber: 31,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -57,29 +59,40 @@ const DiaryCard = ({ diary })=>{
                 children: formattedDate
             }, void 0, false, {
                 fileName: "[project]/src/app/components/DiaryCard.tsx",
-                lineNumber: 34,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex justify-end mt-4 space-x-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: handleUpdate,
-                    className: "bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300",
-                    children: "更新"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/components/DiaryCard.tsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleView,
+                        className: "bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300",
+                        children: "表示"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/DiaryCard.tsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleUpdate,
+                        className: "bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300",
+                        children: "更新"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/DiaryCard.tsx",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/components/DiaryCard.tsx",
-                lineNumber: 35,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/DiaryCard.tsx",
-        lineNumber: 27,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 };
@@ -124,6 +137,9 @@ const WikiCard = ({ wiki })=>{
     }["WikiCard.useMemo[formattedDate]"], [
         wiki.created_at
     ]);
+    const handleView = ()=>{
+        router.push(`/wikis/${wiki.id}`);
+    };
     const handleUpdate = ()=>{
         router.push(`/wikis/edit/${wiki.id}`);
     };
@@ -136,7 +152,7 @@ const WikiCard = ({ wiki })=>{
                 children: wiki.title
             }, void 0, false, {
                 fileName: "[project]/src/app/components/WikiCard.tsx",
-                lineNumber: 28,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -145,7 +161,7 @@ const WikiCard = ({ wiki })=>{
                 children: wiki.content
             }, void 0, false, {
                 fileName: "[project]/src/app/components/WikiCard.tsx",
-                lineNumber: 31,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -153,29 +169,40 @@ const WikiCard = ({ wiki })=>{
                 children: formattedDate
             }, void 0, false, {
                 fileName: "[project]/src/app/components/WikiCard.tsx",
-                lineNumber: 34,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex justify-end mt-4 space-x-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: handleUpdate,
-                    className: "bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300",
-                    children: "更新"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/components/WikiCard.tsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleView,
+                        className: "bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300",
+                        children: "表示"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/WikiCard.tsx",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: handleUpdate,
+                        className: "bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300",
+                        children: "更新"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/WikiCard.tsx",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/components/WikiCard.tsx",
-                lineNumber: 35,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/WikiCard.tsx",
-        lineNumber: 27,
+        lineNumber: 31,
         columnNumber: 5
     }, this);
 };

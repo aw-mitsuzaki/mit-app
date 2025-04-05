@@ -393,6 +393,10 @@ img, video {
   width: 100%;
 }
 
+.max-w-none {
+  max-width: none;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -695,6 +699,11 @@ img, video {
 .focus\:ring-blue-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-green-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity, 1));
 }
 
 .active\:scale-95:active {
