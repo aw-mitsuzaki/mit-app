@@ -2,39 +2,42 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import WikiCard from '../components/DiaryCard';
+import DiaryCard from '../components/DiaryCard';
 
 type Diary = {
-    id: number;
-    title: string;
-    content: string;
-    created_at: string;
-  };
+  id: number;
+  title: string;
+  content: string;
+  created_at: string;
+};
 
 const DiaryPage = () => {
   const [diaries, setDiaries] = useState<Diary[]>([]);
   const [loading, setLoading] = useState(true);
-  const [errors, setErrors] = useState<{ diaries?: string;}>({});
-
-  const fetchData = async <T,>(url: string, setter: (data: T) => void, key: keyof typeof errors) => {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`${key}の取得に失敗しました。`);
-      const data: T = await response.json();
-      setter(data);
-    } catch (err) {
-      console.error(`Error fetching ${key}:`, err);
-      setErrors((prev) => ({ ...prev, [key]: (err as Error).message }));
-    }
-  };
+  const [errors, setErrors] = useState<{ diaries?: string }>({});
 
   useEffect(() => {
+    const fetchData = async <T,>(
+      url: string,
+      setter: (data: T) => void,
+      key: keyof typeof errors
+    ) => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${key}の取得に失敗しました。`);
+        const data: T = await response.json();
+        setter(data);
+      } catch (err) {
+        console.error(`Error fetching ${key}:`, err);
+        setErrors((prev) => ({ ...prev, [key]: (err as Error).message }));
+      }
+    };
+
     const loadData = async () => {
-      await Promise.all([
-        fetchData<Diary[]>('/api/diaries', setDiaries, 'diaries'),
-      ]);
+      await fetchData<Diary[]>('/api/diaries', setDiaries, 'diaries');
       setLoading(false);
     };
+
     loadData();
   }, []);
 
@@ -61,17 +64,15 @@ const DiaryPage = () => {
         {errors.diaries ? (
           <p className="text-red-500">{errors.diaries}</p>
         ) : diaries.length > 0 ? (
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {diaries.map((diary) => (
-              <WikiCard key={diary.id} diary={diary} />
+              <DiaryCard key={diary.id} diary={diary} />
             ))}
           </div>
         ) : (
           <p className="text-gray-500">登録された日報がありません。</p>
         )}
       </section>
-
     </div>
   );
 };

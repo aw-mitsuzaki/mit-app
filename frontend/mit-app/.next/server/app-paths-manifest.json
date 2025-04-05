@@ -1,1 +1,21 @@
-{}
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/diaries/[id]/route": "app/api/diaries/[id]/route.js",
+  "/api/diaries/route": "app/api/diaries/route.js",
+  "/api/passwords/[id]/route": "app/api/passwords/[id]/route.js",
+  "/api/passwords/route": "app/api/passwords/route.js",
+  "/api/wikis/route": "app/api/wikis/route.js",
+  "/api/wikis/[id]/route": "app/api/wikis/[id]/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/diaries/new/page": "app/diaries/new/page.js",
+  "/diaries/[id]/page": "app/diaries/[id]/page.js",
+  "/diaries/edit/[id]/page": "app/diaries/edit/[id]/page.js",
+  "/diaries/page": "app/diaries/page.js",
+  "/passwords/edit/[id]/page": "app/passwords/edit/[id]/page.js",
+  "/passwords/new/page": "app/passwords/new/page.js",
+  "/wikis/[id]/page": "app/wikis/[id]/page.js",
+  "/wikis/edit/[id]/page": "app/wikis/edit/[id]/page.js",
+  "/wikis/new/page": "app/wikis/new/page.js",
+  "/wikis/page": "app/wikis/page.js",
+  "/(main)/page": "app/(main)/page.js"
+}

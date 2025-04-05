@@ -43,15 +43,15 @@ const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => 
   // IDが取得できたらパスワードデータを取得
   useEffect(() => {
     if (!id) return;
-
+  
     const fetchPassword = async () => {
       setLoading(true);
       setError(null);
-
+  
       try {
         const response = await fetch(`/api/passwords/${id}`);
         if (!response.ok) throw new Error('Failed to fetch password data');
-
+  
         const data: Password = await response.json();
         setPassword(data);
         setCategory(data.category);
@@ -61,20 +61,22 @@ const UpdatePasswordPage = ({ params }: { params: Promise<{ id: string }> }) => 
         setPass(data.password);
         setEmail(data.email);
         setMemo(data.memo);
-
+  
       } catch (err: unknown) {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          console.error('Error fetching password:', error);
+          // 修正前: console.error('Error fetching password:', error);
+          // 修正後:
+          console.error('Error fetching password:', err);
         }
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchPassword();
-  }, [id]);
+  }, [id]); // ✅ `error` を依存配列に含める必要がなくなる
 
 
   // 更新処理

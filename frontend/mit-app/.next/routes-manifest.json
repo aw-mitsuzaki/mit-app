@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/api/diaries/[id]",
+      "regex": "^/api/diaries/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/diaries/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/passwords/[id]",
+      "regex": "^/api/passwords/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/passwords/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/wikis/[id]",
+      "regex": "^/api/wikis/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/wikis/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/diaries/edit/[id]",
+      "regex": "^/diaries/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/diaries/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/diaries/[id]",
+      "regex": "^/diaries/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/diaries/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/passwords/edit/[id]",
+      "regex": "^/passwords/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/passwords/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/wikis/edit/[id]",
+      "regex": "^/wikis/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/wikis/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/wikis/[id]",
+      "regex": "^/wikis/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/wikis/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/diaries",
+      "regex": "^/diaries(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/diaries(?:/)?$"
+    },
+    {
+      "page": "/diaries/new",
+      "regex": "^/diaries/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/diaries/new(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/passwords/new",
+      "regex": "^/passwords/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/passwords/new(?:/)?$"
+    },
+    {
+      "page": "/wikis",
+      "regex": "^/wikis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wikis(?:/)?$"
+    },
+    {
+      "page": "/wikis/new",
+      "regex": "^/wikis/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/wikis/new(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}

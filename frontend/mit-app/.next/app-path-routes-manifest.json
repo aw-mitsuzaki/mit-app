@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/diaries/[id]/route": "/api/diaries/[id]",
+  "/api/diaries/route": "/api/diaries",
+  "/api/passwords/[id]/route": "/api/passwords/[id]",
+  "/api/passwords/route": "/api/passwords",
+  "/api/wikis/route": "/api/wikis",
+  "/api/wikis/[id]/route": "/api/wikis/[id]",
+  "/favicon.ico/route": "/favicon.ico",
+  "/diaries/new/page": "/diaries/new",
+  "/diaries/[id]/page": "/diaries/[id]",
+  "/diaries/edit/[id]/page": "/diaries/edit/[id]",
+  "/diaries/page": "/diaries",
+  "/passwords/edit/[id]/page": "/passwords/edit/[id]",
+  "/passwords/new/page": "/passwords/new",
+  "/wikis/[id]/page": "/wikis/[id]",
+  "/wikis/edit/[id]/page": "/wikis/edit/[id]",
+  "/wikis/new/page": "/wikis/new",
+  "/wikis/page": "/wikis",
+  "/(main)/page": "/"
+}

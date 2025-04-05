@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import DiaryCard from '../components/DiaryCard';
 import WikiCard from '../components/WikiCard';
@@ -37,7 +37,11 @@ const MainPage = () => {
   const [loading, setLoading] = useState(true);
   const [errors, setErrors] = useState<{ diaries?: string; wikis?: string; passwords?: string }>({});
 
-  const fetchData = async <T,>(url: string, setter: (data: T) => void, key: keyof typeof errors) => {
+  const fetchData = useCallback(async <T,>(
+    url: string,
+    setter: (data: T) => void,
+    key: keyof typeof errors
+  ) => {
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`${key}の取得に失敗しました。`);
@@ -47,7 +51,7 @@ const MainPage = () => {
       console.error(`Error fetching ${key}:`, err);
       setErrors((prev) => ({ ...prev, [key]: (err as Error).message }));
     }
-  };
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -59,7 +63,7 @@ const MainPage = () => {
       setLoading(false);
     };
     loadData();
-  }, []);
+  }, [fetchData]);
 
   if (loading) {
     return <div>読み込み中...</div>;
@@ -93,16 +97,11 @@ const MainPage = () => {
 
       <section className="my-6">
         <h2 className="text-xl font-semibold">
-        <Link
-              href="/diaries"
-          >
-            日報一覧
-          </Link>
+          <Link href="/diaries">日報一覧</Link>
         </h2>
         {errors.diaries ? (
           <p className="text-red-500">{errors.diaries}</p>
         ) : diaries.length > 0 ? (
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {diaries.map((diary) => (
               <DiaryCard key={diary.id} diary={diary} />
@@ -115,16 +114,11 @@ const MainPage = () => {
 
       <section className="my-6">
         <h2 className="text-xl font-semibold">
-          <Link
-              href="/wikis"
-          >
-            wiki一覧
-          </Link>
+          <Link href="/wikis">wiki一覧</Link>
         </h2>
         {errors.wikis ? (
           <p className="text-red-500">{errors.wikis}</p>
         ) : wikis.length > 0 ? (
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {wikis.map((wiki) => (
               <WikiCard key={wiki.id} wiki={wiki} />

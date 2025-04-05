@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   
       // ベースのクエリ
       let query = 'SELECT * FROM wiki ORDER BY id DESC';
-      const params: any[] = [];
+      const params: number[] = [];
   
       // limit が存在する場合のみ LIMIT 句をつける
       if (limit) {

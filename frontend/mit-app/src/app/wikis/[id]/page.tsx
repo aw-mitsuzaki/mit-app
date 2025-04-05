@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -13,11 +12,8 @@ type Wiki = {
 };
 
 const WikiDetailPage = ({ params }: { params: Promise <{ id: string }> }) => {
-  const router = useRouter();
   const [id, setId] = useState<string | null>(null);
   const [Wiki, setWiki] = useState<Wiki | null>(null);
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -46,8 +42,6 @@ const WikiDetailPage = ({ params }: { params: Promise <{ id: string }> }) => {
 
         const data = await response.json();
         setWiki(data);
-        setTitle(data.title);
-        setContent(data.content);
       } catch (err: unknown) {
         setError(err instanceof Error ? err.message : 'エラーが発生しました');
       } finally {

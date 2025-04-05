@@ -14,27 +14,30 @@ type Wiki = {
 const WikiPage = () => {
   const [wikis, setWikis] = useState<Wiki[]>([]);
   const [loading, setLoading] = useState(true);
-  const [errors, setErrors] = useState<{ wikis?: string;}>({});
-
-  const fetchData = async <T,>(url: string, setter: (data: T) => void, key: keyof typeof errors) => {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`${key}の取得に失敗しました。`);
-      const data: T = await response.json();
-      setter(data);
-    } catch (err) {
-      console.error(`Error fetching ${key}:`, err);
-      setErrors((prev) => ({ ...prev, [key]: (err as Error).message }));
-    }
-  };
+  const [errors, setErrors] = useState<{ wikis?: string }>({});
 
   useEffect(() => {
+    const fetchData = async <T,>(
+      url: string,
+      setter: (data: T) => void,
+      key: keyof typeof errors
+    ) => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${key}の取得に失敗しました。`);
+        const data: T = await response.json();
+        setter(data);
+      } catch (err) {
+        console.error(`Error fetching ${key}:`, err);
+        setErrors((prev) => ({ ...prev, [key]: (err as Error).message }));
+      }
+    };
+
     const loadData = async () => {
-      await Promise.all([
-        fetchData<Wiki[]>('/api/wikis', setWikis, 'wikis'),
-      ]);
+      await fetchData<Wiki[]>('/api/wikis', setWikis, 'wikis');
       setLoading(false);
     };
+
     loadData();
   }, []);
 
@@ -61,7 +64,6 @@ const WikiPage = () => {
         {errors.wikis ? (
           <p className="text-red-500">{errors.wikis}</p>
         ) : wikis.length > 0 ? (
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {wikis.map((wiki) => (
               <WikiCard key={wiki.id} wiki={wiki} />
@@ -71,7 +73,6 @@ const WikiPage = () => {
           <p className="text-gray-500">登録されたWikiがありません。</p>
         )}
       </section>
-
     </div>
   );
 };
