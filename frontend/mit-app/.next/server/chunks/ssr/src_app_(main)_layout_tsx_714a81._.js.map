@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///usr/src/app/src/app/%28main%29/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nconst MainLayout = ({\n    children,\n}: Readonly<{\n    children: React.ReactNode;\n}>) => {\n    return <>{children}</>;\n};\n\nexport default MainLayout;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,aAAa,CAAC,EAChB,QAAQ,EAGV;IACE,qBAAO;kBAAG;;AACd;uCAEe"}},
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
