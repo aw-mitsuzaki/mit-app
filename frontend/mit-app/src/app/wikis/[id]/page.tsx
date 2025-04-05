@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
 
 type Wiki = {
   id: number;
@@ -11,7 +14,7 @@ type Wiki = {
   created_at: string;
 };
 
-const WikiDetailPage = ({ params }: { params: Promise <{ id: string }> }) => {
+const WikiDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const [id, setId] = useState<string | null>(null);
   const [Wiki, setWiki] = useState<Wiki | null>(null);
   const [loading, setLoading] = useState(true);
@@ -63,7 +66,37 @@ const WikiDetailPage = ({ params }: { params: Promise <{ id: string }> }) => {
         {new Date(Wiki.created_at).toLocaleString()}
       </p>
       <article className="markdown prose max-w-none">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            code({
+              inline,
+              className,
+              children,
+              ...props
+            }: {
+              inline?: boolean;
+              className?: string;
+              children: React.ReactNode;
+            }) {
+              const match = /language-(\w+)/.exec(className || "");
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={dark}
+                  language={match[1]}
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            },
+          }}
+        >
           {Wiki.content}
         </ReactMarkdown>
       </article>
