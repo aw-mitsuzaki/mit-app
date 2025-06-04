@@ -1,5 +1,6 @@
 import './globals.css';
 import React from "react";
+import Link from 'next/link';
 
 const RootLayout = ({
     children,
@@ -12,8 +13,10 @@ const RootLayout = ({
                 {/* ヘッダー */}
                 <header className="bg-blue-500 text-white py-4 px-6 fixed top-0 w-full z-10">
                     <h1 className="text-lg font-bold">
+                        <Link href="/" className="block focus:outline-none focus:ring">
                         ローカル環境個人アプリ
                         <span className="sr-only"> - このアプリの共通レイアウト</span>
+                        </Link>
                     </h1>
                 </header>
 

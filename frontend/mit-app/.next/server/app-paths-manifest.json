@@ -4,7 +4,6 @@
   "/api/diaries/route": "app/api/diaries/route.js",
   "/api/passwords/route": "app/api/passwords/route.js",
   "/api/wikis/route": "app/api/wikis/route.js",
-  "/diaries/[id]/page": "app/diaries/[id]/page.js",
   "/diaries/edit/[id]/page": "app/diaries/edit/[id]/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }
