@@ -51,7 +51,7 @@ const DiaryPage = () => {
         <h1 className="text-2xl font-bold">日報管理</h1>
         <div className="flex space-x-4">
           <Link
-            href="/wikis/new"
+            href="/diaries/new"
             className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 active:scale-95 transition-transform"
           >
             日報登録
