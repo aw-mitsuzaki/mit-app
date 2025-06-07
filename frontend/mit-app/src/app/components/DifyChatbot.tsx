@@ -9,8 +9,12 @@ const DifyChatbot = () => {
   const toggleChatbot = () => {
     const bubbleButton = document.getElementById('dify-chatbot-bubble-button');
     const bubbleWindow = document.getElementById('dify-chatbot-bubble-window');
-    if (bubbleButton) bubbleButton.style.display = visible ? 'none' : 'block';
-    if (bubbleWindow) bubbleWindow.style.display = 'none';
+    if (visible) {
+      if (bubbleButton) bubbleButton.style.display = 'none';
+      if (bubbleWindow) bubbleWindow.style.display = 'none';
+    } else {
+      if (bubbleButton) bubbleButton.style.display = 'block';
+    }
     setVisible(!visible);
   };
 
