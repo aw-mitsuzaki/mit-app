@@ -26,7 +26,8 @@ const DifyChatbot = () => {
       >
         {visible ? 'チャット非表示' : 'チャット表示'}
       </button>
-      <Script id="dify-chatbot-config" strategy="beforeInteractive">
+      <Script id="dify-chatbot-config" strategy="afterInteractive">
+
         {`window.difyChatbotConfig = {
           token: 'Sz6ao2xKv8A0xVph',
           baseUrl: 'http://192.168.0.33',
