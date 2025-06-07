@@ -14,6 +14,7 @@ const DifyChatbot = () => {
       if (bubbleWindow) bubbleWindow.style.display = 'none';
     } else {
       if (bubbleButton) bubbleButton.style.display = 'block';
+      if (bubbleWindow) bubbleWindow.style.display = 'block';
     }
     setVisible(!visible);
   };
@@ -26,6 +27,7 @@ const DifyChatbot = () => {
       >
         {visible ? 'チャット非表示' : 'チャット表示'}
       </button>
+
       <Script id="dify-chatbot-config" strategy="afterInteractive">
 
         {`window.difyChatbotConfig = {
