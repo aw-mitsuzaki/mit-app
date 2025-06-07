@@ -9,7 +9,6 @@ const DifyChatbot = () => {
   const toggleChatbot = () => {
     const bubbleButton = document.getElementById('dify-chatbot-bubble-button');
     const bubbleWindow = document.getElementById('dify-chatbot-bubble-window');
-
     if (visible) {
       if (bubbleButton) bubbleButton.style.display = 'none';
       if (bubbleWindow) bubbleWindow.style.display = 'none';
@@ -17,7 +16,6 @@ const DifyChatbot = () => {
       if (bubbleButton) bubbleButton.style.display = 'block';
       if (bubbleWindow) bubbleWindow.style.display = 'block';
     }
-
     setVisible(!visible);
   };
 
@@ -29,7 +27,9 @@ const DifyChatbot = () => {
       >
         {visible ? 'チャット非表示' : 'チャット表示'}
       </button>
-      <Script id="dify-chatbot-config" strategy="beforeInteractive">
+
+      <Script id="dify-chatbot-config" strategy="afterInteractive">
+
         {`window.difyChatbotConfig = {
           token: 'Sz6ao2xKv8A0xVph',
           baseUrl: 'http://192.168.0.33',
