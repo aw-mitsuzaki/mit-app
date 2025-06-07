@@ -1,6 +1,7 @@
 import './globals.css';
 import React from "react";
 import Link from 'next/link';
+import DifyChatbot from './components/DifyChatbot';
 
 const RootLayout = ({
     children,
@@ -29,6 +30,8 @@ const RootLayout = ({
                 <footer className="bg-gray-700 text-white py-4 px-6 fixed bottom-0 w-full z-10">
                     <p className="text-center text-sm">&copy; 2024 - 2025 Local Environment Personal App</p>
                 </footer>
+
+                <DifyChatbot />
             </body>
         </html>
     );
