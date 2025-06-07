@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useState } from 'react';
 // Dify のチャットボットをポップアップで表示するコンポーネント
 const DifyChatbot = () => {
@@ -30,6 +31,7 @@ const DifyChatbot = () => {
         </div>
       )}
     </>
+
 
   );
 };
