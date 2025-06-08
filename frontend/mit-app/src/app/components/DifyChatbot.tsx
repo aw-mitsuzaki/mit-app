@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useState } from 'react';
 // Dify のチャットボットをポップアップで表示するコンポーネント
 const DifyChatbot = () => {
@@ -11,14 +10,20 @@ const DifyChatbot = () => {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="fixed bottom-4 right-4 bg-blue-500 text-white rounded-full px-4 py-2 shadow-lg z-20"
+        className="fixed bottom-4 right-4 bg-blue-500 text-white rounded-full px-4 py-2 shadow-lg z-40"
       >
         {open ? '閉じる' : 'チャット'}
       </button>
       {open && (
-        <div className="fixed inset-0 flex items-center justify-center z-30">
+        <div className="fixed inset-0 z-30 flex items-center justify-center">
+          {/* 背景オーバーレイ */}
           <div
-            className="bg-white rounded shadow-xl overflow-hidden"
+            className="absolute inset-0 bg-black bg-opacity-30"
+            onClick={() => setOpen(false)}
+          />
+          {/* iframeコンテナ */}
+          <div
+            className="relative bg-white rounded shadow-xl overflow-hidden z-40"
             style={{ width: '80%', maxWidth: '600px', height: '80%', maxHeight: '700px' }}
           >
             <iframe
@@ -31,8 +36,6 @@ const DifyChatbot = () => {
         </div>
       )}
     </>
-
-
   );
 };
 
